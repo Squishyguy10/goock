@@ -22,9 +22,9 @@ const games = [
     },
     {
         title: 'Pong',
-        description: 'You start with a small square of territory. You may move in any cardinal direction, and once you venture out of your territory you claim other territory by returning back to your own area. The area you enclosed will become part of your area, just don\'t get hit while you are away from home!',
-        page: '/splix',
-        image: 'splix.webp',
+        description: 'The notorius arcade game! One ball moves across the screen, and 2 players—with their paddle on the side of the screen—move their paddles vertically to deflect the ball. If the ball goes past your paddle, you lose.',
+        page: '/pong',
+        image: 'pong.webp',
         num: 2,
     },
 ]
