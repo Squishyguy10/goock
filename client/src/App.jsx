@@ -8,6 +8,9 @@ import Games from './components/Games';
 import Submission from './components/Submission';
 import Leaderboard from './components/Leaderboard';
 import Instructions from './components/Instructions';
+import NimLeaderboard from './components/NimLeaderboard';
+import TictactoeLeaderboard from './components/TictactoeLeaderboard';
+import SplixLeaderboard from './components/SplixLeaderboard';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -41,6 +44,18 @@ function App() {
 
           <Route exact path='/splix'>
             <Splix />
+          </Route>
+
+          <Route exact path='/leaderboard/nim'>
+            <NimLeaderboard />
+          </Route>
+
+          <Route exact path='/leaderboard/tictactoe'>
+            <TictactoeLeaderboard />
+          </Route>
+
+          <Route exact path='leaderboard/splix'>
+            <SplixLeaderboard />
           </Route>
 
         </Switch>

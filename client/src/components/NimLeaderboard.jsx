@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
+class NimLeaderboard extends Component {
 
-class Leaderboard extends Component {
     render() {
         return (
             <div>
-
+                
             </div>
         );
     }
+
 }
 
-export default Leaderboard;
+export default NimLeaderboard;
