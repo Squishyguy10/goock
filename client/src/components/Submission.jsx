@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 
-class Submissions extends Component {
+class Submission extends Component {
 
     
 
@@ -8,7 +8,8 @@ class Submissions extends Component {
         super(props);
         this.state = {
             value: "",
-            lastBrCount: 0
+            lastBrCount: 0,
+            game: props.game
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -61,4 +62,4 @@ class Submissions extends Component {
     }
 }
 
-export default Submissions;
+export default Submission;
