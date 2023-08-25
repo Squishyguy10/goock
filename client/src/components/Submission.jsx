@@ -41,17 +41,21 @@ class Submission extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-		let codeSubmission = {
-			title: this.state.fileTitle,
-			game: this.state.game,
-			code: this.state.value
-		};
-		let message = {
-			type: "codeSubmission",
-			data: codeSubmission
-		}
-		socket.send(JSON.stringify(message));
-		window.location.href = '/submission'
+        if (this.state.value.trim() === '') alert('No code submitted');
+        else if (this.state.fileTitle.trim() === '') alert('Please enter a file name (without any file extension type)');
+        else {
+            let codeSubmission = {
+                title: this.state.fileTitle,
+                game: this.state.game,
+                code: this.state.value
+            };
+            let message = {
+                type: "codeSubmission",
+                data: codeSubmission
+            }
+            socket.send(JSON.stringify(message));
+            window.location.href = '/submission'
+        }
     }
 
     
@@ -59,14 +63,15 @@ class Submission extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <div className="ml-3 mt-5">
-                    <header className="text-3xl font-display">
+                <div className='ml-3 mt-5'>
+                    <header className='text-3xl font-display'>
                         Submit your program here:
                     </header>
 
                     <input 
                         className='bg-slate-200 hover:bg-slate-300 mt-4 outline:none outline-none' 
                         placeholder='File Name Here'
+                        style={{ textAlign: 'center' }}
 						onChange={this.handleTitleChange}
                     />
 

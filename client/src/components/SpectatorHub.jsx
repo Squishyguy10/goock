@@ -21,17 +21,17 @@ class LeaderboardHub extends Component {
                     {/*Buttons*/}
                     <div className='inline-flex gap-x-4 pb-4'>
                         <Link to='/view/tictactoe'>
-                            <button className='py-2 px-4 bg-blue-400 text-white text-xl hover:bg-blue-500 rounded border-b-4 border-blue-600 hover:border-blue-800'>
+                            <button className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'>
                                 Tic Tac Toe
                             </button>
                         </Link>
                         <Link to='/view/nim'>
-                            <button className='py-2 px-4 bg-blue-400 text-white text-xl hover:bg-blue-500 rounded border-b-4 border-blue-600 hover:border-blue-800'>
+                            <button className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'>
                                 Nim
                             </button>
                         </Link>
                         <Link to='/view/pong'>
-                            <button className='py-2 px-4 bg-blue-400 text-white text-xl hover:bg-blue-500 rounded border-b-4 border-blue-600 hover:border-blue-800'>
+                            <button className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'>
                                 Pong
                             </button>
                         </Link>
