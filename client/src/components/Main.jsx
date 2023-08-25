@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import goose from './images/goose_cartoon.png';
-import { BookOpenIcon } from '@heroicons/react/24/outline';
+
 
 function Main() {
 
@@ -38,11 +38,6 @@ function Main() {
                         How to Play
                     </button>
                 </Link>
-
-                <section id='instructions' className='font-base'>
-                    <BookOpenIcon />
-                </section>
-
             </div>
         </div>
     );
