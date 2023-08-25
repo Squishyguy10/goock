@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 const squareStyle = 'bg-white border border-gray-300 float-left text-5xl font-bold leading-9 h-20 w-20 -ml-1 -mt-1 text-center';
 
+const socket = new WebSocket('ws://localhost:3001');
+
 function Square({ value }) {
     return <button className={squareStyle}>{value}</button>
 }
@@ -27,11 +29,29 @@ class TictactoeView extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
+			game: "tictactoe",
             boardState: props.boardState,
+			gameHistory: []
         };
+		this.getGameHistory();
     }
+	
+	getGameHistory() {
+		socket.addEventListener('open', () => {
+			let gameHistoryRequest = {
+				game: this.state.game
+			};
+			let message = {
+				type: "requestGameHistory",
+				data: gameHistoryRequest
+			};
+			socket.send(JSON.stringify(message));
+		});
+		socket.addEventListener('message', (event) => {
+			this.setState({gameHistory: JSON.parse(event.data)});
+		});
+	}
 
     render() {
         return (

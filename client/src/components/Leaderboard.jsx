@@ -14,7 +14,6 @@ class Leaderboard extends Component {
 		this.getLeaderboardData();
     }
 
-	
 	getLeaderboardData() {
 		socket.addEventListener('open', () => {
 			let leaderboardRequest = {
@@ -26,7 +25,6 @@ class Leaderboard extends Component {
 			};
 			socket.send(JSON.stringify(message));
 		});
-		
 		socket.addEventListener('message', (event) => {
 			this.setState({leaderData: JSON.parse(event.data)});
 		});
