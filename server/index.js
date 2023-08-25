@@ -22,6 +22,19 @@ wss.on('connection', (socket) => {
 				}
 			});
 		}
+		else if (message.type === 'requestLeaderboard') {
+			const reqLeaderData = message.data;
+			fs.readFile("leaderboards/"+reqLeaderData.game+".json", "utf8", (err, jsonData) => {
+				if (err) {
+					console.log(err);
+				}
+				else {
+					const leaderData = JSON.parse(jsonData);
+					socket.send(JSON.stringify(leaderData));
+				}
+			});
+			console.log(reqLeaderData.game + " leaderboard data successfully sent.");
+		}
 	});
 });
 
