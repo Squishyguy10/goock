@@ -65,6 +65,7 @@ class Submission extends Component {
                     <input 
                         className='bg-slate-200 hover:bg-slate-300 mt-4 outline:none outline-none' 
                         placeholder='File Name Here'
+						onChange={this.handleTitleChange}
                     />
 
                     <textarea 
