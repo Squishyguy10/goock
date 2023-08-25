@@ -71,7 +71,7 @@ function Main() {
 
     return (
         <div className='bg-amber-100'>
-            <h1 className="pl-10 pt-10 text-lg">{"- "}{text}</h1>
+            <h1 className="pl-10 pt-10 text-lg text-gray-600 font-inter">{"> "}{text}</h1>
 
             <div className='pt-20 pl- pr-45 container mx-auto'>
                 <div id="slideContainer" className="relative overflow-hidden">
