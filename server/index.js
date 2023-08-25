@@ -10,7 +10,7 @@ const wss = new WebSocket.Server({ server });
 
 wss.on('connection', (socket) => {
 	socket.on('submitCode', codeSubmission => {
-		fs.writeFile("/pending/"+codeSubmission.title+".py", codeSubmission.code, (err) => {
+		fs.writeFile("/pending/"+codeSubmission.game+"/"+codeSubmission.title+".py", codeSubmission.code, (err) => {
 			if (err) {
 				console.log(err);
 			}
