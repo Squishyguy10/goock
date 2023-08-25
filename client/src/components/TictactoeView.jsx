@@ -23,7 +23,7 @@ function Board(gameState) {
     
 }
 
-class TictactoePostSubmit extends Component {
+class TictactoeView extends Component {
 
     constructor(props) {
         super(props);
@@ -35,7 +35,7 @@ class TictactoePostSubmit extends Component {
 
     render() {
         return (
-            <div className='flex justify-center'>
+            <div className='flex justify-center mt-20'>
                 {Board(this.state.boardState)}
             </div>
         );
@@ -43,4 +43,4 @@ class TictactoePostSubmit extends Component {
 
 }
 
-export default TictactoePostSubmit;
+export default TictactoeView;

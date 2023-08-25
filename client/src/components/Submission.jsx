@@ -51,7 +51,7 @@ class Submission extends Component {
 			data: codeSubmission
 		}
 		socket.send(JSON.stringify(message));
-		window.location.href = this.state.game + "/submit"
+		window.location.href = '/submission'
     }
 
     

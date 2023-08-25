@@ -35,7 +35,7 @@ const Canvas = (props, { gameData }) => {
     return <canvas ref={canvasRef} {...props} />
 }
 
-class PongPostSubmit extends Component {
+class PongView extends Component {
 
 
 
@@ -51,4 +51,4 @@ class PongPostSubmit extends Component {
 
 }
 
-export default PongPostSubmit;
+export default PongView;

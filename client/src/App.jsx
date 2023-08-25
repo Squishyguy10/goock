@@ -9,10 +9,10 @@ import LeaderboardHub from './components/LeaderboardHub';
 import Instructions from './components/Instructions';
 import GetFeatured from './components/GetFeatured';
 import Leaderboard from './components/Leaderboard';
-import TictactoePostSubmit from './components/TictactoePostSubmit';
+import TictactoeView from './components/TictactoeView';
 import BottomBar from './components/BottomBar';
-import NimPostSubmit from './components/NimPostSubmit';
-import PongPostSubmit from './components/PongPostSubmit';
+import NimView from './components/NimView';
+import PongView from './components/PongView';
 import Hints from './components/Hints';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -39,28 +39,28 @@ function App() {
             <LeaderboardHub />
           </Route>
 
-          <Route exact path='/tictactoe'>
+          <Route exact path='/submit/tictactoe'>
             <Tictactoe />
           </Route>
 
-          <Route exact path='/tictactoe/submit'>
-            <TictactoePostSubmit />
+          <Route exact path='/view/tictactoe'>
+            <TictactoeView boardState='XXXX OOOO' />
           </Route>
 
-          <Route exact path='/nim'>
+          <Route exact path='/submit/nim'>
             <Nim />
           </Route>
 
-          <Route exact path='/nim/submit'>
-            <NimPostSubmit />          
+          <Route exact path='/view/nim'>
+            <NimView />          
           </Route>
 
-          <Route exact path='/pong'>
+          <Route exact path='/submit/pong'>
             <Pong />
           </Route>
 
-          <Route exact path='/pong/submit'>
-            <PongPostSubmit />
+          <Route exact path='/view/pong'>
+            <PongView />
           </Route>
 
           <Route exact path='/leaderboard/nim'>
@@ -78,6 +78,10 @@ function App() {
 
           <Route exact path='/hints'>
             <Hints />
+          </Route>
+
+          <Route exact path='/submission'>
+            {/*Add the submission component here*/}
           </Route>
 
         </Switch>
