@@ -3,9 +3,9 @@ import { BookOpenIcon } from '@heroicons/react/24/outline';
 
 function Instructions() {
     return (
-        <section id='instructions' className='body-font'>
-            <div className='container px-5 py-10 mx-auto text-center lg:px-40'>
-                <div className='flex flex-col w-full mb-20'>
+        <section id='instructions' className='body-font bg-gradient-to-b from-amber-100 to-white'>
+            <div className='container px-5 pt-40 mx-auto text-center lg:px-40'>
+                <div className='flex flex-col w-full mb-40 '>
                     <BookOpenIcon className='mx-auto inline-block w-10 mt-60' />
                     
                     <h1 className='sm:text-4xl text-5xl font-medium title-font mb-4 text-black py-3 font-display'>
@@ -17,7 +17,7 @@ function Instructions() {
                         of your liking. Your code will then be run against other players' algorithms, and you will be scored based on how many of these matches your algorithm is 
                         able to win. Specific instructions for code handling, such as input and output, will be provided in the instructions of each game.
                     </p>
-                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                    <br /> <br /> <br /> <br /> <br /> <br />
                 </div>
             </div>
         </section>
