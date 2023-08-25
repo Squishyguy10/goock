@@ -5,6 +5,7 @@ import Nim from './components/Nim';
 import Tictactoe from './components/Tictactoe';
 import Splix from './components/Splix';
 import Games from './components/Games';
+import Leaderboard from './components/Leaderboard';
 import goose from './images/goose_cartoon.png';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -22,6 +23,10 @@ function App() {
 
           <Route exact path='games'>
             <Games />
+          </Route>
+
+          <Route exact path='leaderboard'>
+            <Leaderboard />
           </Route>
 
         </Switch>
