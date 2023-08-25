@@ -7,7 +7,6 @@ import Splix from './components/Splix';
 import Games from './components/Games';
 import Submission from './components/Submission';
 import Leaderboard from './components/Leaderboard';
-import goose from './images/goose_cartoon.png';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -32,10 +31,6 @@ function App() {
 
         </Switch>
       </Router>
-
-      <div className='pl-40'>
-        <img src={goose} width={100} height={100} alt='Goose Cartoon' />
-      </div>
 
     </div>
   );
