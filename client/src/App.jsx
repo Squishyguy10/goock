@@ -6,7 +6,7 @@ import Tictactoe from './components/Tictactoe';
 import Splix from './components/Splix';
 import Games from './components/Games';
 import Submission from './components/Submission';
-import Leaderboard from './components/Leaderboard';
+import LeaderboardHub from './components/LeaderboardHub';
 import Instructions from './components/Instructions';
 import NimLeaderboard from './components/NimLeaderboard';
 import TictactoeLeaderboard from './components/TictactoeLeaderboard';
@@ -31,7 +31,7 @@ function App() {
           </Route>
 
           <Route exact path='/leaderboards'>
-            <Leaderboard />
+            <LeaderboardHub />
           </Route>
 
           <Route exact path='/tictactoe'>
