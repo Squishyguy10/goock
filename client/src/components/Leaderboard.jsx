@@ -2,6 +2,28 @@ import React, { Component } from 'react';
 
 const socket = new WebSocket('ws://localhost:3001');
 
+
+
+const testJson = [
+
+    {
+        place: 1,
+        name: 'Basgoong',
+        score: 21312,
+    },
+    {
+        place: 2,
+        name: 'Fortnite',
+        score: 222
+    },
+    {
+        place: 3,
+        name: 'Bard',
+        score: 2
+    }
+  
+]
+
 class Leaderboard extends Component {
 
     constructor(props) {
@@ -12,6 +34,7 @@ class Leaderboard extends Component {
         };
 		this.getLeaderboardData();
     }
+
 	
 	getLeaderboardData() {
 		socket.addEventListener('open', () => {
@@ -33,7 +56,26 @@ class Leaderboard extends Component {
     render() {
         return (
             <div>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Place</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    {testJson.map((user) => (
+                    <tbody>
+                        <tr key={user.place}>
+                            <td>{user.place}</td>
+                            <td>{user.name}</td>
+                            <td>{user.score}</td>
+                        </tr>   
+                    </tbody>
+                
 
+                 ))};
+                </table>
             </div>
         );
     }
