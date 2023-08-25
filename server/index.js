@@ -1,28 +1,14 @@
 const express = require("express");
-
-const PORT = process.env.PORT || 3001;
-
-const app = express();
-var http = require('http');
-var server = http.createServer(app);
-var { Server } = require("socket.io");
-var io = new Server(server);
+const http = require('http');
+const WebSocket = require('ws');
 const fs = require('fs');
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+const app = express();
+const server = http.createServer(app);
 
-app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
-});
-  
-app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
-});
+const wss = new WebSocket.Server({ server });
 
-
-io.on('connection', (socket) => {
+wss.on('connection', (socket) => {
 	socket.on('submitCode', codeSubmission => {
 		fs.writeFile("/pending/"+codeSubmission.title+".py", codeSubmission.code, (err) => {
 			if (err) {
@@ -32,5 +18,15 @@ io.on('connection', (socket) => {
 				console.log(codeSubmission.title + " was submitted.");
 			}
 		});
-	}
-}
+	});
+});
+
+app.get("/", (req, res) => {
+    //res.json({ message: "Hello from server!" });
+	res.sendFile("Hi :)");
+});
+
+const PORT = process.env.PORT || 3001;
+server.listen(PORT, () => {
+	console.log(`Server listening on ${PORT}`);
+});
