@@ -1,15 +1,41 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import goose from './images/goose_cartoon.png';
 
 
 function Main() {
+    // goose slide across
+    useEffect(() => {
+        const slideImage = () => {
+            const image = document.getElementById('slideImage');
+            const containerWidth = document.getElementById('slideContainer').offsetWidth;
+            const imageWidth = image.offsetWidth;
+            let currentPosition = -imageWidth;
+        
+            const slide = () => {
+                currentPosition++;
+                if(currentPosition > containerWidth) {
+                    currentPosition = -imageWidth;
+                }
+                image.style.transform = `translateX(${currentPosition}px)`;
+                requestAnimationFrame(slide);
+            };
+            slide();
+        
+            return () => cancelAnimationFrame(slide);
+        };
+    
+        slideImage();
+    }, []);
+    
 
     return (
         <div>
-            <div className='pt-40 pl-40'>
-                <img src={goose} width={100} height={100} alt='Goose Cartoon' />
+            <div className='pt-40 pl-40 container mx-auto'>
+                <div id="slideContainer" className="relative overflow-hidden">
+                    <img id="slideImage" src={goose} alt="Goose Cartoon" width={100} height={100} />
+                </div>
             </div>
 
             <div className='container px-5, py-10 mx-auto text-center lg:px-40'>

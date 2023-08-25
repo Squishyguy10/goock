@@ -6,7 +6,7 @@ function Instructions() {
         <section id='instructions' className='body-font'>
             <div className='container px-5 py-10 mx-auto text-center lg:px-40'>
                 <div className='flex flex-col w-full mb-20'>
-                    <BookOpenIcon className='mx-auto inline-block w-10 mt-60'/>
+                    <BookOpenIcon className='mx-auto inline-block w-10 mt-60' />
                     
                     <h1 className='sm:text-4xl text-5xl font-medium title-font mb-4 text-black py-3 font-display'>
                         How to Play
