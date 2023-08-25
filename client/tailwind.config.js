@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'display': ['Arial',],
+      'display': ['Poppins', 'Arial'],
     },
     extend: {},
   },

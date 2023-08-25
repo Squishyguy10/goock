@@ -8,7 +8,7 @@ function Instructions() {
                 <div className='flex flex-col w-full mb-20'>
                     <BookOpenIcon className='mx-auto inline-block w-10 mt-60'/>
                     
-                    <h1 className='sm:text-4xl text-5xl font-medium title-font mb-4 text-black py-3'>
+                    <h1 className='sm:text-4xl text-5xl font-medium title-font mb-4 text-black py-3 font-display'>
                         How to Play
                     </h1>
                     <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
