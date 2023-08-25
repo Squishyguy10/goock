@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { XMarkIcon, CubeIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
+import { XMarkIcon, CubeIcon, MinusCircleIcon } from '@heroicons/react/24/outline';
 
 const socket = new WebSocket('ws://localhost:3001');
 
@@ -58,7 +58,7 @@ class Leaderboard extends Component {
     getIcon(styling) {
         if (this.state.game === 'tictactoe') return <XMarkIcon className={styling} />
         else if (this.state.game === 'nim') return <CubeIcon className={styling} />
-        else return <Squares2X2Icon className={styling} />
+        else return <MinusCircleIcon className={styling} />
     }
 
     getName() {
