@@ -4,6 +4,7 @@ import Main from './components/Main';
 import Nim from './components/Nim';
 import Tictactoe from './components/Tictactoe';
 import Splix from './components/Splix';
+import Games from './components/Games';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -18,16 +19,8 @@ function App() {
             <Main />
           </Route>
 
-          <Route exact path='nim'>
-            <Nim />
-          </Route>
-
-          <Route exact path='tictactoe'>
-            <Tictactoe />
-          </Route>
-
-          <Route exact path='splix'>
-            <Splix />
+          <Route exact path='games'>
+            <Games />
           </Route>
 
         </Switch>
