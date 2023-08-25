@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const socket = new WebSocket('ws://localhost:3001');
 
@@ -50,6 +51,11 @@ class Submission extends Component {
 			data: codeSubmission
 		}
 		socket.send(JSON.stringify(message));
+        alert('basgoong');
+    }
+
+    postSubmitLink() {
+        return this.state.game + '/submit';
     }
 
     
@@ -78,9 +84,11 @@ class Submission extends Component {
                         placeholder='Code Here'
                     />
                     <br />
-                    <button className='py-2 px-4 bg-green-400 text-white text-xl hover:bg-green-500 rounded border-b-4 border-green-600 hover:border-green-800 mt-4'>
-                        Submit
-                    </button>
+                    <Link to={this.postSubmitLink()}>
+                        <button className='py-2 px-4 bg-green-400 text-white text-xl hover:bg-green-500 rounded border-b-4 border-green-600 hover:border-green-800 mt-4'>
+                            Submit
+                        </button>
+                    </Link>
 
                 </div>
             </form>
