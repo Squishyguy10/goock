@@ -1,12 +1,7 @@
 [
-	{
-		"place": 1,
-		"name":	"Albert Einstein",
-		"score": 5
-	},
-	{
-		"place": 2,
-		"name":	"The Entire Country of Botswana",
-		"score": 4
-	}
+    {
+        "name": "test123.py",
+        "score": 0,
+        "place": 1
+    }
 ]
