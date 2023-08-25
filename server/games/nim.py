@@ -6,7 +6,7 @@ while playing:
     pile, number = map(int, input().split(","))
     piles[int(pile)] -= int(number)
     if sum(piles) == 0:
-        print("win one" if turn == "two" else "win two")
+        print("win one" if turn == "one" else "win two")
         playing = False
     turn = "two" if turn == "one" else "one"
     if playing:

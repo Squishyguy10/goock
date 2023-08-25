@@ -27,7 +27,7 @@ for game in games:
         playing = True
         while playing:
             gameData = gameProcess.stdout.readline() 
-            gameHistory["game"].append(gameData)
+            gameHistory["game"].append(gameData.replace("\n", ""))
             
             if turn == "one":
                 playerOne.stdin.write(gameData)
@@ -54,7 +54,8 @@ for game in games:
             turn = "two" if turn == "one" else "one"
         
         gameData = gameProcess.stdout.readline() 
-        gameHistory["game"].append(gameData)
+        gameHistory["game"].append(gameData.replace("\n", ""))
+        gameHistory["winner"] = winner
         gameHistories.append(gameHistory)
         
         if winner == "one":
