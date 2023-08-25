@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import goose from './images/goose_cartoon.png';
+import { BookOpenIcon } from '@heroicons/react/24/outline';
 
 function Main() {
 
     return (
         <div>
-
             <div className='pt-40 pl-40'>
                 <img src={goose} width={100} height={100} alt='Goose Cartoon' />
             </div>
@@ -39,11 +39,9 @@ function Main() {
                     </button>
                 </Link>
 
-                <section id='instructions' className='body-font'>
-                    
+                <section id='instructions' className='font-base'>
+                    <BookOpenIcon />
                 </section>
-
-                
 
             </div>
         </div>
