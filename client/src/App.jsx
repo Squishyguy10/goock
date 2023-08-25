@@ -9,6 +9,7 @@ import Submission from './components/Submission';
 import LeaderboardHub from './components/LeaderboardHub';
 import Instructions from './components/Instructions';
 import Leaderboard from './components/Leaderboard';
+import BottomBar from './components/BottomBar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -58,6 +59,8 @@ function App() {
 
         </Switch>
       </Router>
+
+      <BottomBar />
 
     </div>
   );
