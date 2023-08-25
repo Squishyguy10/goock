@@ -41,7 +41,7 @@ class Submission extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 		let codeSubmission = {
-			title: "temp",
+			title: this.state.fileTitle,
 			game: this.state.game,
 			code: this.state.value
 		};
