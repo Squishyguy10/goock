@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { PuzzlePieceIcon } from '@heroicons/react/24/outline';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Link } from 'react-router-dom';
@@ -43,17 +42,7 @@ function Carousel({slides}) {
 
     return (
         <div className="overflow-hidden relative">
-            <div className='container px-5 mx-auto text-center lg:px-40'>
-                <div className='flex flex-col w-full mb-20'>
-                    <PuzzlePieceIcon className='mx-auto inline-block w-10 py-10' />
-                    <h1 className='sm:text-4xl text-3xl font-medium title-font mb-4 font-display'>
-                        Games
-                    </h1>
-                    <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
-                        Here is the selection of games. Have fun!
-                    </p>
-                </div>
-            </div>
+            
 
             <div className={`flex transition ease-out duration-400`} style={{ transform: `translateX(-${current*100}%)` }}>
                 {slides.map((s) => { 
@@ -62,12 +51,12 @@ function Carousel({slides}) {
             </div>
 
 
-            <div className="absolute top-40 h-full w-full justify-between flex items-centre text-red">
-                <button onClick={prevSlide} aria-label="left" size="small">
-                    <ArrowBackIosNewIcon fontSize="inherit" />
+            <div className="absolute top-0 h-full w-full justify-between flex">
+                <button onClick={prevSlide} aria-label="left" size="small" className="text-purple-700">
+                    <ArrowBackIosNewIcon />
                 </button>
-                <button onClick={nextSlide} aria-label="left" size="small">
-                    <ArrowForwardIosIcon fontSize="inherit" />
+                <button onClick={nextSlide} aria-label="right" size="small" className="text-purple-700">
+                    <ArrowForwardIosIcon />
                 </button>
             </div>
 
