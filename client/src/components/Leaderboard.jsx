@@ -14,7 +14,6 @@ class Leaderboard extends Component {
 		this.getLeaderboardData();
     }
 
-	
 	getLeaderboardData() {
 		socket.addEventListener('open', () => {
 			let leaderboardRequest = {
@@ -26,7 +25,6 @@ class Leaderboard extends Component {
 			};
 			socket.send(JSON.stringify(message));
 		});
-		
 		socket.addEventListener('message', (event) => {
 			this.setState({leaderData: JSON.parse(event.data)});
 		});
@@ -44,7 +42,7 @@ class Leaderboard extends Component {
                 </thead>
 				{this.state.leaderData.map((user, index) => ( //{(this.state.leaderData).map((user, index) => (
                     <tbody className='text-lg'>
-                        <tr key={user} className={index % 2 === 1 ? 'bg-amber-100' : 'bg-white'}>
+                        <tr key={user} className={index % 2 === 1 ? 'bg-gray-100' : 'bg-white'}>
                             <td className='font-bold'>{user.place}</td>
                             <td>{user.name}</td>
                             <td>{user.score}</td>

@@ -35,6 +35,19 @@ wss.on('connection', (socket) => {
 				}
 			});
 		}
+		else if (message.type === 'requestGameHistory') {
+			const reqGameHistoryData = message.data;
+			fs.readFile("gameHistories/"+reqGameHistoryData.game+".json", "utf8", (err, jsonData) => {
+				if (err) {
+					console.log(err);
+				}
+				else {
+					const gameHistoryData = JSON.parse(jsonData);
+					socket.send(JSON.stringify(gameHistoryData));
+					console.log(reqGameHistoryData.game + " game history data successfully sent.");
+				}
+			});
+		}
 	});
 });
 
