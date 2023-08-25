@@ -32,7 +32,7 @@ function Main() {
     // typing text (names)
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Welcome to Goock Games.", "Front-end: Aaron & Andrew", "Backend: Damon", "Art: Felix", "Presentation: Andrew", "We hope you enjoy!"];
+    const toRotate = ["Welcome to Goock Games.", "Front-end: Aaron & Andrew", "Backend: Damon", "Art: Felix", "Presentation: Andrew & Felix", "We hope you enjoy!"];
     const [text, setText] = useState("");
     const [delta, setDelta] = useState(90);
 
