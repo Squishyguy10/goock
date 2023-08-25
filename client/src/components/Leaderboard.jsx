@@ -23,7 +23,7 @@ class Leaderboard extends Component {
                             {leaderboardTable.map((person) => (
                                 <tr key={person.rank}>
                                 <td className="py-2 px-4 border-b">{person.rank}</td>
-                                <td className="py-2 px-4 border-b">{person.name}</td>
+                                <td className="py-2 px-4 border-b">{person.username}</td>
                                 <td className="py-2 px-4 border-b">{person.score}</td>
                             </tr>
                         ))} 
