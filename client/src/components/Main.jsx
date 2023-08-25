@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import goose from './images/goose_cartoon.png';
@@ -28,11 +28,52 @@ function Main() {
     
         slideImage();
     }, []);
+
+    // typing text (names)
+    const [loopNum, setLoopNum] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    const toRotate = ["Welcome to Goock Games.", "Front-end: Aaron & Andrew", "Backend: Damon", "Art: Felix", "Presentation: Andrew", "We hope you enjoy!"];
+    const [text, setText] = useState("");
+    const [delta, setDelta] = useState(90);
+
+    useEffect(() => {
+        let ticker = setInterval(() => {
+            tick();
+        }, delta)
+
+        return () => {clearInterval(ticker)};
+    })
+
+    const tick = () => {
+        let i = loopNum % toRotate.length;
+        let fullText = toRotate[i];
+        let updatedText = isDeleting ? fullText.substring(0, text.length-1) : fullText.substring(0, text.length+1);
+
+        setText(updatedText);
+        
+        if(isDeleting && updatedText === "") {
+            setIsDeleting(false);
+            setLoopNum(loopNum+1);
+            setDelta(600);
+        }
+        else if(isDeleting) {
+            setDelta(50);
+        }
+        else if(!isDeleting && updatedText === fullText) {
+            setIsDeleting(true);
+            setDelta(1800);
+        }
+        else if(!isDeleting){
+            setDelta(90);
+        }
+    }
     
 
     return (
         <div>
-            <div className='pt-40 pl-40 container mx-auto'>
+            <h1 className="pl-10 pt-10 text-lg">{"- "}{text}</h1>
+
+            <div className='pt-20 pl-40 container mx-auto'>
                 <div id="slideContainer" className="relative overflow-hidden">
                     <img id="slideImage" src={goose} alt="Goose Cartoon" width={100} height={100} />
                 </div>
