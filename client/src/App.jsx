@@ -5,13 +5,14 @@ import Nim from './components/Nim';
 import Tictactoe from './components/Tictactoe';
 import Splix from './components/Splix';
 import Games from './components/Games';
+import goose from './images/goose_cartoon.png';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div>
       <Navbar />
-
+      
       <Router>
         <Switch>
 
@@ -25,6 +26,10 @@ function App() {
 
         </Switch>
       </Router>
+
+      <div className='pl-40'>
+        <img src={goose} width={100} height={100} alt='Goose Cartoon' />
+      </div>
 
     </div>
   );
