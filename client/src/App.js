@@ -1,5 +1,9 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Main from './components/Main';
+import Nim from './components/Nim';
+import Tictactoe from './components/Tictactoe';
+import Splix from './components/Splix';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -28,7 +32,7 @@ function App() {
 
         </Switch>
       </Router>
-      
+
     </div>
   );
 }
