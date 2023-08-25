@@ -20,6 +20,9 @@ function Navbar() {
                     <a href='/hints' className='mr-5 hover:text-white'>
                         Hints
                     </a>
+                    <a href='/spectate' className='mr-5 hover:text-white'>
+                        Spectate
+                    </a>
                 </nav>
             </div>
         </header>

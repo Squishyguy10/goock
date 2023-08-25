@@ -14,6 +14,7 @@ import BottomBar from './components/BottomBar';
 import NimView from './components/NimView';
 import PongView from './components/PongView';
 import Hints from './components/Hints';
+import SpectatorHub from './components/SpectatorHub';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -82,6 +83,10 @@ function App() {
 
           <Route exact path='/submission'>
             {/*Add the submission component here*/}
+          </Route>
+
+          <Route exact path='/spectate'>
+            <SpectatorHub />
           </Route>
 
         </Switch>
