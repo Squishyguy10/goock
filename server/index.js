@@ -9,15 +9,19 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 wss.on('connection', (socket) => {
-	socket.on('submitCode', codeSubmission => {
-		fs.writeFile("/pending/"+codeSubmission.game+"/"+codeSubmission.title+".py", codeSubmission.code, (err) => {
-			if (err) {
-				console.log(err);
-			}
-			else {
-				console.log(codeSubmission.title + " was submitted.");
-			}
-		});
+	socket.on('message', (event) => {
+		const message = JSON.parse(event);
+		if (message.type === 'codeSubmission') {
+			const codeSubmission = message.data;
+			fs.writeFile("pending/"+codeSubmission.game+"/"+codeSubmission.title+".py", codeSubmission.code, (err) => {
+				if (err) {
+					console.log(err);
+				}
+				else {
+					console.log(codeSubmission.title + " was submitted.");
+				}
+			});
+		}
 	});
 });
 
