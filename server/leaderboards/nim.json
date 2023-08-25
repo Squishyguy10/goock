@@ -1,17 +1,22 @@
 [
     {
+        "name": "Andrew.py",
+        "score": 5,
+        "place": 1
+    },
+    {
         "name": "fullsolution.py",
-        "score": 4,
+        "score": 5,
         "place": 1
     },
     {
         "name": "testA.py",
         "score": 2,
-        "place": 2
+        "place": 3
     },
     {
         "name": "testB.py",
         "score": 0,
-        "place": 3
+        "place": 4
     }
 ]

@@ -11,16 +11,16 @@ function Navbar() {
                     </a>
                 </a>
                 <nav className='md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-amber-700 flex flex-wrap items-center text-xl justify-center'>
-                    <a href='/games' className='mr-5 hover:text-white'>
+                    <a href='/games' className='mr-5 hover:text-amber-400'>
                         Games
                     </a>
-                    <a href='/leaderboards' className='mr-5 hover:text-white'>
+                    <a href='/leaderboards' className='mr-5 hover:text-amber-400'>
                         Leaderboards
                     </a>
-                    <a href='/hints' className='mr-5 hover:text-white'>
+                    <a href='/hints' className='mr-5 hover:text-amber-400'>
                         Hints
                     </a>
-                    <a href='/spectate' className='mr-5 hover:text-white'>
+                    <a href='/spectate' className='mr-5 hover:text-amber-400'>
                         Spectate
                     </a>
                 </nav>
