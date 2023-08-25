@@ -39,7 +39,7 @@ class Submissions extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="ml-3 mt-5">
-                    <header className="text-xl font-display">
+                    <header className="text-3xl font-display">
                         Submit your program here:
                     </header>
 

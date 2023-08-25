@@ -31,6 +31,18 @@ function App() {
             <Leaderboard />
           </Route>
 
+          <Route exact path='/tictactoe'>
+            <Tictactoe />
+          </Route>
+
+          <Route exact path='/nim'>
+            <Nim />
+          </Route>
+
+          <Route exact path='/splix'>
+            <Splix />
+          </Route>
+
         </Switch>
       </Router>
 
