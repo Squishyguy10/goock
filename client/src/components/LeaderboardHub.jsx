@@ -36,7 +36,7 @@ class LeaderboardHub extends Component {
 
                     <ReloadLink to='/leaderboard/nim'>Nim</ReloadLink>
 
-                    <ReloadLink to='/leaderboard/splix'>Splix</ReloadLink>
+                    <ReloadLink to='/leaderboard/pong'>Pong</ReloadLink>
                 </div>
             </div>
         );

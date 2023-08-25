@@ -64,7 +64,7 @@ class Leaderboard extends Component {
     getName() {
         if (this.state.game === 'tictactoe') return 'Tic Tac Toe';
         else if (this.state.game === 'nim') return 'Nim';
-        else return 'Splix';
+        else return 'Pong';
     }
 
     render() {

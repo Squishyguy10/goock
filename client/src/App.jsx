@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Nim from './components/Nim';
 import Tictactoe from './components/Tictactoe';
-import Splix from './components/Splix';
+import Pong from './components/Pong';
 import Games from './components/Games';
 import Submission from './components/Submission';
 import LeaderboardHub from './components/LeaderboardHub';
@@ -47,8 +47,8 @@ function App() {
             <Nim />
           </Route>
 
-          <Route exact path='/splix'>
-            <Splix />
+          <Route exact path='/pong'>
+            <Pong />
           </Route>
 
           <Route exact path='/leaderboard/nim'>
@@ -59,8 +59,8 @@ function App() {
             <Leaderboard game='tictactoe' />
           </Route>
 
-          <Route exact path='/leaderboard/splix'>
-            <Leaderboard game='splix' />
+          <Route exact path='/leaderboard/pong'>
+            <Leaderboard game='pong' />
           </Route>
 
           <Route exact path='/canvas'>
