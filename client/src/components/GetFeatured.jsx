@@ -6,7 +6,7 @@ function GetFeatured() {
 
         <div className='container px-5 pt-40 mx-auto text-center lg:px-40'>
             <div className='flex flex-col w-full mb-40 '>
-                <AcademicCapIcon className='mx-auto inline-block w-10 mt-10' />
+                <AcademicCapIcon className='mx-auto inline-block w-10' />
                 
                 <h1 className='sm:text-4xl text-5xl font-medium title-font mb-4 text-black py-3 font-display'>
                     Get Featured
