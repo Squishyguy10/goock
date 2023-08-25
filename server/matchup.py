@@ -3,7 +3,7 @@ from itertools import combinations
 import subprocess
 import json
 
-games = ["tictactoe", "nim", "splix"]
+games = ["tictactoe", "nim", "pong"]
 
 for game in games:
     algos = os.listdir("approved/" + game)
