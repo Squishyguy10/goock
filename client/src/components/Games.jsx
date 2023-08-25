@@ -13,19 +13,17 @@ const games = [
         title: 'Nim',
         description: 'There is some number of piles of stones and each pile has some number of stones. Player A goes first and player B goes second. On each turn, you may remove any number of stones from any single pile. Whoever removes the last stone from the last remaining pile wins.',
         page: '/nim',
-        image: '',
+        image: 'nim.svg',
     },
     {
         title: 'Splix',
         description: 'You start with a small square of territory. You may move in any cardinal direction, and once you venture out of your territory you claim other territory by returning back to your own area. The area you enclosed will become part of your area, just don\'t get hit while you are away from home!',
         page: '/splix',
-        image: '',
+        image: 'splix.webp',
     },
 ]
 
-    
 class Games extends Component {
-
     render() {
         return (
             <div className='container px-5 mx-auto text-center lg:px-40'>
@@ -49,7 +47,7 @@ class Games extends Component {
                                     className='absolute inset-0 w-full h-full object-cover object-center py-10 '
                                     src={game.image}
                                 />
-                                <div className='px-8 py-10 relative z-10 w-full border-4 border-blue-500 bg-blue-900 opacity-0 hover:opacity-100 transition ease-in-out delay-100 duration-300'>
+                                <div className='px-8 py-10 relative z-10 w-full border-4 border-blue-500 bg-blue-900 opacity-0 hover:opacity-100 transition-x-20 ease-in-out duration-500'>
                                     <h1 className='font-bold title-font text-lg font-medium text-white mb-3'>
                                         {game.title}
                                     </h1>
