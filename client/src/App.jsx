@@ -10,9 +10,9 @@ import LeaderboardHub from './components/LeaderboardHub';
 import Instructions from './components/Instructions';
 import GetFeatured from './components/GetFeatured';
 import Leaderboard from './components/Leaderboard';
-import TictactoeCanvas from './components/TictactoeCanvas';
+import TictactoePostSubmit from './components/TictactoePostSubmit';
 import BottomBar from './components/BottomBar';
-import NimCanvas from './components/NimCanvas';
+import NimPostSubmit from './components/NimPostSubmit';
 import Hints from './components/Hints';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -43,8 +43,16 @@ function App() {
             <Tictactoe />
           </Route>
 
+          <Route exact path='/tictactoe/submit'>
+            <TictactoePostSubmit />
+          </Route>
+
           <Route exact path='/nim'>
             <Nim />
+          </Route>
+
+          <Route exact path='/nim/submit'>
+            <NimPostSubmit />          
           </Route>
 
           <Route exact path='/pong'>
@@ -63,10 +71,6 @@ function App() {
             <Leaderboard game='pong' />
           </Route>
 
-          <Route exact path='/canvas'>
-            {/* <TictactoeCanvas boardState='         ' /> */}
-            <NimCanvas />
-          </Route>
 
           <Route exact path='/hints'>
             <Hints />

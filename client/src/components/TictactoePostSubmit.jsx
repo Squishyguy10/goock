@@ -23,7 +23,7 @@ function Board(gameState) {
     
 }
 
-class TictactoeCanvas extends Component {
+class TictactoePostSubmit extends Component {
 
     constructor(props) {
         super(props);
@@ -43,4 +43,4 @@ class TictactoeCanvas extends Component {
 
 }
 
-export default TictactoeCanvas;
+export default TictactoePostSubmit;

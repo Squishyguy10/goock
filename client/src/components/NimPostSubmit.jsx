@@ -19,7 +19,7 @@ const testJson = [
     },
 ]
 
-class NimCanvas extends Component {
+class NimPostSubmit extends Component {
 
     constructor(props) {
         super(props);
@@ -69,4 +69,4 @@ class NimCanvas extends Component {
 
 }
 
-export default NimCanvas;
+export default NimPostSubmit;
