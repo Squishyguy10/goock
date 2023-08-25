@@ -1,5 +1,7 @@
 import React, { Component, useState } from 'react';
 
+const socket = new WebSocket('ws://localhost:3001');
+
 class Submission extends Component {
 
     
@@ -30,8 +32,17 @@ class Submission extends Component {
     }
 
     handleSubmit = (event) => {
-        alert(this.state.value);
         event.preventDefault();
+		let codeSubmission = {
+			title: "temp",
+			game: this.state.game,
+			code: this.state.value
+		};
+		let message = {
+			type: "codeSubmission",
+			data: codeSubmission
+		}
+		socket.send(JSON.stringify(message));
     }
 
     
