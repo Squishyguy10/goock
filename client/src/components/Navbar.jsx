@@ -17,6 +17,9 @@ function Navbar() {
                     <a href='/leaderboards' className='mr-5 hover:text-white'>
                         Leaderboards
                     </a>
+                    <a href='/hints' className='mr-5 hover:text-white'>
+                        Hints
+                    </a>
                 </nav>
             </div>
         </header>

@@ -13,6 +13,7 @@ import Leaderboard from './components/Leaderboard';
 import TictactoeCanvas from './components/TictactoeCanvas';
 import BottomBar from './components/BottomBar';
 import NimCanvas from './components/NimCanvas';
+import Hints from './components/Hints';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -65,6 +66,10 @@ function App() {
           <Route exact path='/canvas'>
             {/* <TictactoeCanvas boardState='         ' /> */}
             <NimCanvas />
+          </Route>
+
+          <Route exact path='/hints'>
+            <Hints />
           </Route>
 
         </Switch>
