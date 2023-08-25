@@ -39,17 +39,7 @@ function Main() {
                         How to Play
                     </button>
                 </HashLink>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                
             </div>
         </div>
     );
