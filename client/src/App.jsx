@@ -12,7 +12,9 @@ import GetFeatured from './components/GetFeatured';
 import Leaderboard from './components/Leaderboard';
 import TictactoeCanvas from './components/TictactoeCanvas';
 import BottomBar from './components/BottomBar';
+import NimCanvas from './components/NimCanvas';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -61,7 +63,8 @@ function App() {
           </Route>
 
           <Route exact path='/canvas'>
-            <TictactoeCanvas boardState='         '/>
+            {/* <TictactoeCanvas boardState='         ' /> */}
+            <NimCanvas />
           </Route>
 
         </Switch>
