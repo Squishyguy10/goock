@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import goose from './images/goose_cartoon.png';
 
 
@@ -33,11 +34,22 @@ function Main() {
                     </Link>
                 </div>
                 <br />
-                <Link to='#instructions'>
+                <HashLink smooth to='/#instructions'>
                     <button className='py-2 px-4 bg-red-400 text-white text-xl hover:bg-red-500 rounded border-b-4 border-red-600 hover:border-red-800'>
                         How to Play
                     </button>
-                </Link>
+                </HashLink>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
     );

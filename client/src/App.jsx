@@ -7,6 +7,7 @@ import Splix from './components/Splix';
 import Games from './components/Games';
 import Submission from './components/Submission';
 import Leaderboard from './components/Leaderboard';
+import Instructions from './components/Instructions';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
           <Route exact path='/'>
             <Main />
+            <Instructions />
           </Route>
 
           <Route exact path='/games'>
