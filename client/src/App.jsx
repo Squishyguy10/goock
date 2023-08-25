@@ -10,6 +10,7 @@ import LeaderboardHub from './components/LeaderboardHub';
 import Instructions from './components/Instructions';
 import GetFeatured from './components/GetFeatured';
 import Leaderboard from './components/Leaderboard';
+import TictactoeCanvas from './components/TictactoeCanvas';
 import BottomBar from './components/BottomBar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -57,6 +58,10 @@ function App() {
 
           <Route exact path='/leaderboard/splix'>
             <Leaderboard game='splix' />
+          </Route>
+
+          <Route exact path='/canvas'>
+            <TictactoeCanvas boardState='         '/>
           </Route>
 
         </Switch>
