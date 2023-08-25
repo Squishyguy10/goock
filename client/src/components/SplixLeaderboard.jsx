@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
+class SplixLeaderboard extends Component {
 
-class Leaderboard extends Component {
     render() {
         return (
             <div>
@@ -9,6 +9,7 @@ class Leaderboard extends Component {
             </div>
         );
     }
+
 }
 
-export default Leaderboard;
+export default SplixLeaderboard; 
