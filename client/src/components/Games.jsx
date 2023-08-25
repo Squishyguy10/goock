@@ -26,7 +26,7 @@ class Games extends Component {
         ]
 
         return (
-            <div className="bg-amber-100">
+            <div className="bg-gradient-to-b from-amber-100 via-amber-100 to-white">
                 <div className='container px-5 mx-auto text-center lg:px-40'>
                     <div className='flex flex-col w-full mb-20'>
                         <PuzzlePieceIcon className='mx-auto inline-block w-10 py-10' />
