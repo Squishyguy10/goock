@@ -31,9 +31,9 @@ wss.on('connection', (socket) => {
 				else {
 					const leaderData = JSON.parse(jsonData);
 					socket.send(JSON.stringify(leaderData));
+					console.log(reqLeaderData.game + " leaderboard data successfully sent.");
 				}
 			});
-			console.log(reqLeaderData.game + " leaderboard data successfully sent.");
 		}
 	});
 });
