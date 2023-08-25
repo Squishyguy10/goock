@@ -9,12 +9,12 @@ while playing:
     for lp in linePositions:
         line = "".join(board[pos] for pos in lp)
         if line == turn*3:
-            print("win")
+            print("win one" if turn == "X" else "win two")
             playing = False
             break
     turn = "O" if turn == "X" else "X"
     if " " not in board and playing == False:
         print("draw")
         playing = False
-    if playing == True:
+    if playing:
         print("playing")
