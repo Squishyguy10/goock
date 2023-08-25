@@ -70,7 +70,7 @@ function Main() {
     
 
     return (
-        <div>
+        <div className='bg-amber-100'>
             <div style={{ backgroundImage:`url(${"https://img.freepik.com/free-vector/green-yellow-abstract-background_53876-99558.jpg"})` }} />
 
             <h1 className="pl-10 pt-10 text-lg">{"- "}{text}</h1>
