@@ -4,38 +4,13 @@ import { XMarkIcon, CubeIcon, Squares2X2Icon } from '@heroicons/react/24/outline
 
 const socket = new WebSocket('ws://localhost:3001');
 
-const testJson = [
-
-    {
-        place: 1,
-        name: 'Basgoong',
-        score: 21312,
-    },
-    {
-        place: 2,
-        name: 'Fortnite',
-        score: 222
-    },
-    {
-        place: 3,
-        name: 'Bard',
-        score: 2
-    },
-    {
-        place: 4,
-        name: 'Shard',
-        score: 0,
-    }
-  
-]
-
 class Leaderboard extends Component {
 
     constructor(props) {
 		super(props);
         this.state = {
             game: props.game,
-			leaderData: {}
+			leaderData: []
         };
 		this.getLeaderboardData();
     }
@@ -68,7 +43,7 @@ class Leaderboard extends Component {
                         <th>Score</th>
                     </tr>
                 </thead>
-                {testJson.map((user, index) => (
+                {(this.state.leaderData).map((user, index) => (
                     <tbody className='text-lg'>
                         <tr key={user} className={index % 2 == 1 ? 'bg-amber-100' : 'bg-white'}>
                             <td className='font-bold'>{user.place}</td>
