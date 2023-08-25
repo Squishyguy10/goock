@@ -1,12 +1,17 @@
 [
-	{
-		"place": 1,
-		"name":	"Balabagingya",
-		"score": 7
-	},
-	{
-		"place": 2,
-		"name":	"Walter White",
-		"score": 3
-	}
+    {
+        "name": "fullsolution.py",
+        "score": 4,
+        "place": 1
+    },
+    {
+        "name": "testA.py",
+        "score": 2,
+        "place": 2
+    },
+    {
+        "name": "testB.py",
+        "score": 0,
+        "place": 3
+    }
 ]

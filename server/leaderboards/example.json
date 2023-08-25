@@ -1,0 +1,37 @@
+[
+	{
+		"place": 1,
+		"name":	"Pongthep Bank Charnchaichujit",
+		"score": 9
+	},
+	{
+		"place": 2,
+		"name":	"Balabagingya",
+		"score": 7
+	},
+	{
+		"place": 3,
+		"name":	"Suberman",
+		"score": 5
+	},
+	{
+		"place": 3,
+		"name":	"Albert Einstein",
+		"score": 5
+	},
+	{
+		"place": 5,
+		"name":	"Laymin Hong Kong",
+		"score": 4
+	},
+	{
+		"place": 5,
+		"name":	"The Entire Country of Botswana",
+		"score": 4
+	},
+	{
+		"place": 7,
+		"name":	"Walter White",
+		"score": 3
+	}
+]

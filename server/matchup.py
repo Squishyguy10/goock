@@ -78,7 +78,22 @@ for game in games:
         playerTwo.stdout.close()
         playerTwo.wait()
         
-    print(wins)
+    #print(wins)
     with open("gameHistories/"+game+".json", "w") as jsonFile:
         jsonHistory = json.dumps(gameHistories, indent=4)
         jsonFile.write(jsonHistory)
+    with open("leaderboards/"+game+".json", "w") as jsonFile:
+        leaderboardData = []
+        for algo in wins:
+            leaderboardData.append({
+                "name": algo,
+                "score": wins[algo]
+            })
+        leaderboardData.sort(key=lambda x: x['score'], reverse=True)
+        for i in range(len(leaderboardData)):
+            leaderboardData[i]["place"] = i+1
+            if i > 0 and leaderboardData[i-1]["score"] == leaderboardData[i]["score"]:
+                leaderboardData[i]["place"] = leaderboardData[i-1]["place"]
+        jsonLeaderboard = json.dumps(leaderboardData, indent=4)
+        jsonFile.write(jsonLeaderboard)
+        #print(leaderboardData)
