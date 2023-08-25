@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { XMarkIcon, CubeIcon, Squares2X2Icon } from '@heroicons/react/24/outline';
+
 
 const socket = new WebSocket('ws://localhost:3001');
 
@@ -18,6 +20,11 @@ const testJson = [
         place: 3,
         name: 'Bard',
         score: 2
+    },
+    {
+        place: 4,
+        name: 'Shard',
+        score: 0,
     }
   
 ]
@@ -51,27 +58,55 @@ class Leaderboard extends Component {
 		});
 	}
 
+    getTable() {
+        return (
+            <div> 
+                <thead>
+                    <tr className='text-xl'>
+                        <th>Place</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                {testJson.map((user, index) => (
+                    <tbody className='text-lg'>
+                        <tr key={user} className={index % 2 == 1 ? 'bg-amber-100' : 'bg-white'}>
+                            <td className='font-bold'>{user.place}</td>
+                            <td>{user.name}</td>
+                            <td>{user.score}</td>
+                        </tr>   
+                    </tbody>
+                ))}
+            </div>
+        );
+    }
+
+    getIcon(styling) {
+        if (this.state.game == 'tictactoe') return <XMarkIcon className={styling} />
+        else if (this.state.game == 'nim') return <CubeIcon className={styling} />
+        else return <Squares2X2Icon className={styling} />
+    }
+
+    getName() {
+        if (this.state.game == 'tictactoe') return 'Tic Tac Toe';
+        else if (this.state.game == 'nim') return 'Nim';
+        else return 'Splix';
+    }
+
     render() {
         return (
-            <div className='container px-5 mx-auto text-center lg:px-40'>
-                <table className=''> 
-                    <thead>
-                        <tr>
-                            <th>Place</th>
-                            <th>Name</th>
-                            <th>Score</th>
-                        </tr>
-                    </thead>
-                    {testJson.map((user) => (
-                        <tbody>
-                            <tr key={user}>
-                                <td>{user.place}</td>
-                                <td>{user.name}</td>
-                                <td>{user.score}</td>
-                            </tr>   
-                        </tbody>
-                    ))};
-                </table>
+            <div className='text-center bg-amber-100'>
+                {this.getIcon('mx-auto w-10 py-10')}
+                <h1 className='sm:text-4xl text-3xl font-medium title-font font-display pb-10'>
+                    Top Submissions for {this.getName()}
+                </h1>
+                <div className='flex justify-center container px-5 mx-auto text-center md:px-40 pb-20'>
+                    
+                    <table cellPadding='50'>
+                        {this.getTable()}
+                    </table>
+                    
+                </div>
             </div>
         );
     }

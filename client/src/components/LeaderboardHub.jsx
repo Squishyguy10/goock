@@ -6,7 +6,7 @@ class LeaderboardHub extends Component {
     render() {
         return (
             <div className='container px-5 mx-auto text-center lg:px-40'>
-                <div className='flex flex-col w-full mb-10 '>
+                <div className='flex flex-col w-full mb-10'>
                     <TrophyIcon className='mx-auto inline-block w-10 py-10' />
                     <h1 className='sm:text-4xl text-3xl font-medium title-font font-display'>
                         Leaderboards
