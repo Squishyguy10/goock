@@ -28,9 +28,11 @@ class Submissions extends Component {
                         Submit your program here:
                     </header>
 
-                    <textarea className="bg-slate-300 hover:bg-slate-400 mt-4" value={this.state.value} onChange={this.handleChange} />
-                    <br></br>
-                    <input type="submit" value="Submit" className="py-2 px-4 bg-green-400 text-white text-xl hover:bg-green-500 rounded border-b-4 border-green-600 hover:border-green-800 mt-4"/>
+                    <textarea rows="50" cols="230" className="bg-slate-300 hover:bg-slate-400 mt-4 outline:none" value={this.state.value} onChange={this.handleChange} />
+                    <br/>
+                    <button className="py-2 px-4 bg-green-400 text-white text-xl hover:bg-green-500 rounded border-b-4 border-green-600 hover:border-green-800 mt-4">
+                        Submit
+                    </button>
 
                 </div>
             </form>
