@@ -1,6 +1,5 @@
-xor_sum = 0
-
 while True:
+    xor_sum = 0
     piles = list(map(int, input().split(',')))
     n = len(piles)
     for stones in piles:
