@@ -27,7 +27,7 @@ function App() {
             <Games />
           </Route>
 
-          <Route exact path='/leaderboard'>
+          <Route exact path='/leaderboards'>
             <Leaderboard />
           </Route>
 
