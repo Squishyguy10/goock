@@ -3,7 +3,7 @@ import React from 'react';
 function Navbar() {
 
     return (
-        <header className='bg-gray-800 md:sticky top-0 z-10'>
+        <header className='bg-gray-700 md:sticky top-0 z-10'>
             <div className='container flex flex-wrap p-2 flex-col md:flex-row items-center text-gray-300'>
                 <a className='title-font font-medium mb-4 md:mb-0'>
                     <a href='/' className='ml-3 text-2xl text-gray-100'>

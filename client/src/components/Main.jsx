@@ -15,7 +15,7 @@ function Main() {
         
             const slide = () => {
                 currentPosition++;
-                if(currentPosition > containerWidth) {
+                if(currentPosition === containerWidth) {
                     currentPosition = -imageWidth;
                 }
                 image.style.transform = `translateX(${currentPosition}px)`;
@@ -71,11 +71,9 @@ function Main() {
 
     return (
         <div className='bg-amber-100'>
-            <div style={{ backgroundImage:`url(${"https://img.freepik.com/free-vector/green-yellow-abstract-background_53876-99558.jpg"})` }} />
-
             <h1 className="pl-10 pt-10 text-lg">{"- "}{text}</h1>
 
-            <div className='pt-20 pl-40 container mx-auto'>
+            <div className='pt-20 pl- pr-45 container mx-auto'>
                 <div id="slideContainer" className="relative overflow-hidden">
                     <img id="slideImage" src={goose} alt="Goose Cartoon" width={100} height={100} />
                 </div>
