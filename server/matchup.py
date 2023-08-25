@@ -37,7 +37,7 @@ for game in games:
             checkwin = gameProcess.stdout.readline()
 
             if "win" in checkwin:
-                winner = turn
+                winner = "one" if "one" in checkwin else "two"
                 playing = False
             elif "draw" in checkwin:
                 winner = "draw"
