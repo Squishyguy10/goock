@@ -1,6 +1,7 @@
 import os
 from itertools import combinations
 import subprocess
+import json
 
 games = ["tictactoe", "nim", "splix"]
 
@@ -9,6 +10,7 @@ for game in games:
     matchups = list(combinations(algos, 2))
     matchups.extend([[b, a] for a, b in matchups])
     wins = {algo: 0 for algo in algos}
+    gameHistories = []
     
     for algoOne, algoTwo in matchups:
         gameProcess = subprocess.Popen(["python", "games/"+game+".py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
@@ -16,10 +18,16 @@ for game in games:
         playerOne = subprocess.Popen(["python", "approved/"+game+"/"+algoOne], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         playerTwo = subprocess.Popen(["python", "approved/"+game+"/"+algoTwo], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         
+        gameHistory = {
+            "one": algoOne,
+            "two": algoTwo,
+            "game": []
+        }
         turn = "one"
         playing = True
         while playing:
             gameData = gameProcess.stdout.readline() 
+            gameHistory["game"].append(gameData)
             
             if turn == "one":
                 playerOne.stdin.write(gameData)
@@ -45,6 +53,10 @@ for game in games:
             
             turn = "two" if turn == "one" else "one"
         
+        gameData = gameProcess.stdout.readline() 
+        gameHistory["game"].append(gameData)
+        gameHistories.append(gameHistory)
+        
         if winner == "one":
             wins[algoOne] += 1
         elif winner == "two":
@@ -66,3 +78,6 @@ for game in games:
         playerTwo.wait()
         
     print(wins)
+    with open("gameHistories/"+game+".json", "w") as jsonFile:
+        jsonHistory = json.dumps(gameHistories, indent=4)
+        jsonFile.write(jsonHistory)

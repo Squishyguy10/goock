@@ -18,3 +18,4 @@ while playing:
         playing = False
     if playing:
         print("playing")
+print("".join(board))

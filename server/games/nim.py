@@ -11,3 +11,4 @@ while playing:
     turn = "two" if turn == "one" else "one"
     if playing:
         print("playing")
+print(",".join(list(map(str, piles))))
