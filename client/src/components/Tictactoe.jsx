@@ -12,13 +12,13 @@ class Tictactoe extends Component {
                         Tic Tac Toe
                     </h1>
                     <p className='pt-4'>
-                        Your code must be in an infinte loop (while True will suffice). At the start of your loop, 
+                        Your code must be in an infinite loop ("while True" will suffice). At the start of your loop, 
                         you should input the board using input(). The format of the board will be a string of 9 characters, 
                         each either 'X', 'O', or ' ', representing Xs, Os, and empty spaces respectively. The first 3 characters represent 
                         the top row, the next 3 characters represent the middle row, and the last 3 characters represents the bottom row. After 
-                        reading the board state, you place your marker by specifying the index within the string (0-8 inclusive) where you want to 
-                        place your piece. Also, to determine whether or not you are X or O, simply count the number of spaces in the string on input. If there 
-                        are an odd number of spaces, this means you are X. If there are an even number of spaces, this means you are O.
+                        reading the board state, place your marker by specifying the index within the string (0-8 inclusive) where you want to 
+                        place your piece. Also, to determine whether you are X or O, simply count the number of spaces in the string on input. 
+                        An odd number of spaces means you are X, while an even number of spaces means you are O.
                     </p>
                 </div>
                 <Submission game='tictactoe' />
