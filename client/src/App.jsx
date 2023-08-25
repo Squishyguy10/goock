@@ -8,6 +8,7 @@ import Games from './components/Games';
 import Submission from './components/Submission';
 import LeaderboardHub from './components/LeaderboardHub';
 import Instructions from './components/Instructions';
+import GetFeatured from './components/GetFeatured';
 import Leaderboard from './components/Leaderboard';
 import BottomBar from './components/BottomBar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/'>
             <Main />
             <Instructions />
+            <GetFeatured />
           </Route>
 
           <Route exact path='/games'>
