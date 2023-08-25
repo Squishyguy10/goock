@@ -4,7 +4,7 @@ class Tictactoe extends Component {
     render () {
         return (
             <div>
-
+                
             </div>
         );
     }
