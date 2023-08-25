@@ -11,16 +11,16 @@ class Submissions extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({value: event.target.value});
     }
 
-    handleSubmit(event) {
+    handleSubmit = (event) => {
         alert(this.state.value);
         event.preventDefault();
     }
 
-    render () {
+    render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="ml-3 mt-5">
@@ -30,7 +30,7 @@ class Submissions extends Component {
 
                     <textarea className="bg-slate-300 hover:bg-slate-400 mt-4" value={this.state.value} onChange={this.handleChange} />
                     <br></br>
-                    <input type="submit" value="Submit" className="py-2 px-4 bg-blue-400 text-white text-xl hover:bg-blue-500 rounded border-b-4 border-blue-600 hover:border-blue-800 mt-4"/>
+                    <input type="submit" value="Submit" className="py-2 px-4 bg-green-400 text-white text-xl hover:bg-green-500 rounded border-b-4 border-green-600 hover:border-green-800 mt-4"/>
 
                 </div>
             </form>

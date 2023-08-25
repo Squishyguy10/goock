@@ -22,11 +22,11 @@ function App() {
             <Main />
           </Route>
 
-          <Route exact path='submission'>
-            <Submission />
+          <Route exact path='/games'>
+            <Games />
           </Route>
 
-          <Route exact path='leaderboard'>
+          <Route exact path='/leaderboard'>
             <Leaderboard />
           </Route>
 
