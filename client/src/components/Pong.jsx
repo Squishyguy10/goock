@@ -12,17 +12,16 @@ class Pong extends Component {
                         Pong
                     </h1>
                     <p className='pt-4'>
-                        Pong is a classic arcade game in which each player controls a single rectangular paddle, 
-                        one player on the left, the other on the right. A ball will be travelling through the 750 by 300 rectangular board 
-                        and bounce off the upper and lower walls. However, if it hits either of the side walls, one of the players wins. 
-                        If the ball hits the wall on Player A's side, Player B will win, and vice versa. This is why Player A and B 
-                        have paddles, which will act as a wall to prevent the ball from hitting the sides. Your task is to make an algorithm 
-                        that will get the position of the ball and its velocity, and move the paddle's position accordingly. More rigourously, 
-                        you will have to, in an infinite loop (while True) will suffice, read (using input()) the following: the ball's position, 
+                        Pong is a classic arcade game in which each player controls the veritcal movement of a rectangular paddle: one player on the left, 
+                        the other on the right. A ball travel through the 750 by 300 rectangular board and bounce off the upper and lower walls. However, 
+                        if it hits either of the side walls, the player across from such wall wins (i.e. if the ball hits Player A's wall, Player B will win, 
+                        and vice versa). The moveable paddle deflects the ball, bouncing it back to the other side. Your task is to make an algorithm 
+                        that will get the ball's position and velocity, then move your paddle's position accordingly. More rigourously, 
+                        you will have to, in an infinite loop ("while True" will suffice), read (using input()) the following: the ball's position, 
                         the ball's velocity, and your paddle's position. The input will be given in the following format: (x,y,dx,dy,py), where (x, y) 
                         represents the ball's position (where (0, 0) is the top left), (dx, dy) are the velocities in the x and y axes respectively 
                         (positive dx is down, negative dx is up, positive dy is right, negative dy is left), and py is the y position of the centre of 
-                        your paddle (your paddle's x position is fixed). Keep in mind your paddle is 54 units in length. You must then output either "up" 
+                        your paddle (your paddle's x position is fixed). Note that the paddle is 54 units in length. You must then output either "up" 
                         or "down", to go up 6 pixels or down 6 pixels respectively. 
                     </p>
                 </div>
