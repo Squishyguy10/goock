@@ -53,7 +53,7 @@ function App() {
             <Leaderboard game='tictactoe' />
           </Route>
 
-          <Route exact path='leaderboard/splix'>
+          <Route exact path='/leaderboard/splix'>
             <Leaderboard game='splix' />
           </Route>
 

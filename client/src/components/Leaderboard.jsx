@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 const socket = new WebSocket('ws://localhost:3001');
 
-
-
 const testJson = [
 
     {
@@ -55,8 +53,8 @@ class Leaderboard extends Component {
 
     render() {
         return (
-            <div>
-                <table >
+            <div className='container px-5 mx-auto text-center lg:px-40'>
+                <table className=''> 
                     <thead>
                         <tr>
                             <th>Place</th>
@@ -65,16 +63,14 @@ class Leaderboard extends Component {
                         </tr>
                     </thead>
                     {testJson.map((user) => (
-                    <tbody>
-                        <tr key={user.place}>
-                            <td>{user.place}</td>
-                            <td>{user.name}</td>
-                            <td>{user.score}</td>
-                        </tr>   
-                    </tbody>
-                
-
-                 ))};
+                        <tbody>
+                            <tr key={user}>
+                                <td>{user.place}</td>
+                                <td>{user.name}</td>
+                                <td>{user.score}</td>
+                            </tr>   
+                        </tbody>
+                    ))};
                 </table>
             </div>
         );
