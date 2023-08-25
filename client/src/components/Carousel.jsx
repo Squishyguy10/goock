@@ -21,7 +21,7 @@ const games = [
         num: 1,
     },
     {
-        title: 'Splix',
+        title: 'Pong',
         description: 'You start with a small square of territory. You may move in any cardinal direction, and once you venture out of your territory you claim other territory by returning back to your own area. The area you enclosed will become part of your area, just don\'t get hit while you are away from home!',
         page: '/splix',
         image: 'splix.webp',

@@ -15,6 +15,7 @@ class Games extends Component {
                 <div className="w-[30%] m-auto">
                     <Carousel slides={slides}/>
                 </div>
+                <br /> <br /> <br />
             </div>
         );
     }
