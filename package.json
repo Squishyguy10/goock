@@ -1,0 +1,16 @@
+{
+  "name": "goock",
+  "version": "1.0.0",
+  "description": "This is team Goock, consisting of Aaron, Andrew, Damon, and Felix. This is our project for Goose Hacks 2023!.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
