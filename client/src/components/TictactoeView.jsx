@@ -28,28 +28,45 @@ class TictactoeView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-			game: "tictactoe",
+			game: 'tictactoe',
             boardState: props.boardState,
 			gameHistory: []
         };
 		this.getGameHistory();
+
     }
 	
-	getGameHistory() {
+    getGameHistory() {
 		socket.addEventListener('open', () => {
 			let gameHistoryRequest = {
 				game: this.state.game
 			};
 			let message = {
-				type: "requestGameHistory",
+				type: 'requestGameHistory',
 				data: gameHistoryRequest
 			};
 			socket.send(JSON.stringify(message));
 		});
 		socket.addEventListener('message', (event) => {
 			this.setState({gameHistory: JSON.parse(event.data)});
+            console.log(this.state.gameHistory);
+            if (this.state.gameHistory.length) this.displayGame();
 		});
+        
 	}
+
+
+
+    displayGame() {
+        let rand = Math.floor(Math.random() * this.state.gameHistory.length);
+        let moves = this.state.gameHistory[rand].game.length;
+        let oldTime = new Date().getUTCSeconds();
+        for (let i=0; i<moves; i++) {
+            let curState = this.state.gameHistory[rand].game[i];
+            this.setState({boardState: curState});
+            
+        }
+    }
 
     render() {
         return (
