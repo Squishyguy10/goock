@@ -1,7 +1,7 @@
 [
     {
-        "name": "stay.py",
-        "score": 5,
+        "name": "antisuberman.py",
+        "score": 4,
         "place": 1
     },
     {
@@ -10,13 +10,13 @@
         "place": 2
     },
     {
-        "name": "antisuberman.py",
-        "score": 2,
-        "place": 3
+        "name": "suberman.py",
+        "score": 3,
+        "place": 2
     },
     {
-        "name": "suberman.py",
+        "name": "stay.py",
         "score": 2,
-        "place": 3
+        "place": 4
     }
 ]

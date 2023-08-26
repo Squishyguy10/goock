@@ -4,12 +4,14 @@
         "two": "test2.py",
         "game": [
             "         ",
-            "    X    ",
-            "O   X    ",
-            "O   X   X",
-            "OO  X   X",
-            "OO  X  XX",
-            "OOO X  XX"
+            "  X      ",
+            "O X      ",
+            "OXX      ",
+            "OXXO     ",
+            "OXXO    X",
+            "OXXOO   X",
+            "OXXOO  XX",
+            "OXXOOO XX"
         ],
         "winner": "two"
     },
@@ -18,14 +20,17 @@
         "two": "test3.py",
         "game": [
             "         ",
-            "        X",
-            "O       X",
-            "O   X   X",
-            "OO  X   X",
-            "OO  XX  X",
-            "OOO XX  X"
+            " X       ",
+            "OX       ",
+            "OX   X   ",
+            "OXO  X   ",
+            "OXO  X  X",
+            "OXOO X  X",
+            "OXOO XX X",
+            "OXOOOXX X",
+            "OXOOOXXXX"
         ],
-        "winner": "two"
+        "winner": "one"
     },
     {
         "one": "test2.py",
@@ -48,15 +53,12 @@
         "game": [
             "         ",
             "X        ",
-            "X O      ",
-            "XXO      ",
-            "XXO     O",
-            "XXOX    O",
-            "XXOX  O O",
-            "XXOXX O O",
-            "XXOXX OOO"
+            "X       O",
+            "XX      O",
+            "XX     OO",
+            "XXX    OO"
         ],
-        "winner": "two"
+        "winner": "one"
     },
     {
         "one": "test3.py",
@@ -64,16 +66,15 @@
         "game": [
             "         ",
             "X        ",
-            "XO       ",
-            "XOX      ",
-            "XOX    O ",
-            "XOXX   O ",
-            "XOXX O O ",
-            "XOXXXO O ",
-            "XOXXXO OO",
-            "XOXXXOXOO"
+            "X O      ",
+            "XXO      ",
+            "XXO   O  ",
+            "XXOX  O  ",
+            "XXOX  O O",
+            "XXOXX O O",
+            "XXOXXOO O"
         ],
-        "winner": "one"
+        "winner": "two"
     },
     {
         "one": "test3.py",

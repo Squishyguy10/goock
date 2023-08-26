@@ -63,8 +63,8 @@ while playing:
         if ball["y"] <= 0:
             ball["y"] = 0
             ball["vely"] = -ball["vely"]
-        if ball["y"] >= height-1:
-            ball["y"] = height-1
+        if ball["y"] >= height-ballLength-1:
+            ball["y"] = height-ballLength-1
             ball["vely"] = -ball["vely"]
     
     turn = "two" if turn == "one" else "one"
