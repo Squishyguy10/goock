@@ -26,7 +26,6 @@ class LeaderboardHub extends Component {
                         <h1 className='sm:text-4xl text-3xl font-medium title-font font-display'>
                             Leaderboards
                         </h1>
-                        
                     </div>
 
                     <h1 className='text-2xl font-medium mb-10'>Select the game</h1>
