@@ -14,7 +14,7 @@ class NimView extends Component {
             p1: '',
             p2: '',
             p1t: false,
-            winner: '',
+            winner: ''
         };
 		this.getGameHistory();
     }
@@ -31,9 +31,10 @@ class NimView extends Component {
 			socket.send(JSON.stringify(message));
 		});
 		socket.addEventListener('message', (event) => {
-			this.setState({gameHistory: JSON.parse(event.data)});
-            console.log(this.state.gameHistory);
-            if (this.state.gameHistory.length > 0) this.displayGame();
+			this.setState({gameHistory: JSON.parse(event.data)}, () => {
+				//console.log(this.state.gameHistory);
+				if (this.state.gameHistory.length > 0) this.displayGame();
+			});
 		});
 	}
 
