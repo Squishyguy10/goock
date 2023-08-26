@@ -84,6 +84,9 @@ class TictactoeView extends Component {
         return (
             <div className='bg-amber-100'>
                 <div className='pt-40 pb-60'>
+                    <div className='flex justify-center'>
+                        <h1 className='sm:text-4xl text-3xl font-medium title-font font-display mb-5'>Spectate Tic Tac Toe</h1>
+                    </div>
                     <div className='flex justify-center mt-20 w-full'>
                         {Board(this.state.boardState)}
                     </div>
