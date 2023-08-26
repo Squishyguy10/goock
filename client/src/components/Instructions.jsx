@@ -12,11 +12,11 @@ function Instructions() {
                         How to Play
                     </h1>
                     <p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
-                        Goock Games is a collection of various 1-on-1 games: turn-based and 2-dimensional. All of these games are playable using a computer algorithm, 
-                        (i.e. you can determine & develop an optimal algorithm to win). Your objective is to develop an algorithm that will be able play the games to any strategy 
-                        of your liking. Your code will then be run against other players' algorithms, and you will be scored based on how many of these matches your algorithm is 
-                        able to win. Specific instructions for code handling, such as input and output, will be provided in the instructions of each game. As of right now, Python 3
-                         is the only language supported.
+                        Goock Games is a collection of various 1-on-1 games: turn-based and 2-dimensional. All of these games are playable using a computer algorithm 
+                        (i.e. you can determine & develop an optimal algorithm to win). Your objective is to develop an algorithm that plays the games to any strategy 
+                        of your liking. Your code will then be run against other players' algorithms, and you will be scored based on how many of these matches your 
+                        algorithm wins. Specific instructions for code handling, such as input and output, will be provided in the instructions of each game. As of 
+                        right now, Python 3 is the only language supported for submissions.
                     </p>
                     
                 </div>
