@@ -21,7 +21,7 @@ function Carousel({slides}) {
                     return (
                         <> 
                             <Link to={s.page}>
-                                <button className='absolute ml-[43%] mt-[15%] top-0 justify-center py-2 px-4 bg-gray-200 text-gray-800 text-xl hover:bg-gray-400 rounded border-b-4 border-gray-400 hover:border-gray-600'>
+                                <button className='absolute ml-[43.5%] mt-[15%] top-0 justify-center py-2 px-4 bg-gray-200 text-gray-800 text-xl hover:bg-gray-400 rounded border-b-4 border-gray-400 hover:border-gray-600'>
                                     {s.title}
                                 </button>
                             </Link>
