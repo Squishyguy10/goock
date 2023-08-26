@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const socket = new WebSocket('ws://localhost:3001');
+
 const testJson = [
     {
         num: 0,
@@ -18,8 +20,6 @@ const testJson = [
         cnt: 9
     },
 ]
-
-const socket = new WebSocket('ws://localhost:3001');
 
 class NimView extends Component {
 
@@ -85,7 +85,6 @@ class NimView extends Component {
             </div>
         );
     }
-
 }
 
 export default NimView;

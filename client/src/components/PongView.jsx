@@ -1,5 +1,7 @@
 import React, { Component, useEffect, useRef } from 'react';
 
+const socket = new WebSocket('ws://localhost:3001');
+
 const paddleHeight = 54, paddleWidth = 12;
 const ballLength = 12;
 
@@ -37,18 +39,38 @@ const Canvas = (props, { gameData }) => {
 
 class PongView extends Component {
 
-
+    constructor(props) {
+        super(props);
+        this.state = {
+			game: "pong",
+			gameHistory: []
+        };
+		this.getGameHistory();
+    }
+	
+	getGameHistory() {
+		socket.addEventListener('open', () => {
+			let gameHistoryRequest = {
+				game: this.state.game
+			};
+			let message = {
+				type: "requestGameHistory",
+				data: gameHistoryRequest
+			};
+			socket.send(JSON.stringify(message));
+		});
+		socket.addEventListener('message', (event) => {
+			this.setState({gameHistory: JSON.parse(event.data)});
+		});
+	}
 
     render() {
-
         return (
             <div className='flex justify-center mt-10'>
                 <Canvas width={750} height={300} gameData={data} />
             </div>
         );
-
     }
-
 }
 
 export default PongView;
