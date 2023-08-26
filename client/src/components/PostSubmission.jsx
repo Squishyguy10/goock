@@ -11,7 +11,7 @@ class Submission extends Component {
                         <h1 className='sm:text-4xl text-2xl pt-2 font-medium title-font font-display'>
                             Submission received! Please wait for server processing...
                         </h1>
-
+                            
                         
                     </div>
                 </div>
