@@ -58,7 +58,6 @@ class TictactoeView extends Component {
     displayGame() {
         let rand = Math.floor(Math.random() * this.state.gameHistory.length);
         let moves = this.state.gameHistory[rand].game.length;
-        let oldTime = new Date().getUTCSeconds();
 		let i=0;
 		setInterval(function() {
 			let curState = this.state.gameHistory[rand].game[i%moves];
