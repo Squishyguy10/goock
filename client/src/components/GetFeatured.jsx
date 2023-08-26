@@ -15,7 +15,7 @@ function GetFeatured() {
                         Top performing algorithms will be featured on our 
                         coveted leaderboards! <a href='/leaderboards' className='underline text-blue-500'>Click here</a> to 
                         view the leaderboards. Placement is based solely on your algorithm's score, determined by 
-                        how many algorithms you beat.
+                        how many algorithms you beat. You get 1 point for every win and 0.5 points for every draw.
                     </p>
  
                 </div>

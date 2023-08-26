@@ -27,7 +27,7 @@ class Submission extends Component {
 
                                 <Link to='/leaderboards'>
                                     <button className='py-2 px-4 bg-blue-400 text-white text-xl hover:bg-blue-500 rounded border-b-4 border-blue-600 hover:border-blue-800'>
-                                        Leaderboard
+                                        Leaderboards
                                     </button>
                                 </Link>
                             </div>  
