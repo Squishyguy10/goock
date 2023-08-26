@@ -71,11 +71,11 @@ class Submission extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className='ml-3 mt-5 pb-56'>
                     <header className='text-3xl font-display'>
-                        Submit your program here:
+                        Submit your program here (must be Python 3):
                     </header>
 
                     <input 
-                        className='bg-slate-200 hover:bg-slate-300 mt-4 mb-7 outline:none outline-none ' 
+                        className='bg-slate-200 hover:bg-slate-300 mt-4 mb-7 border border-black' 
                         placeholder='File Name Here'
                         style={{ textAlign: 'center' }}
 						onChange={this.handleTitleChange}
@@ -86,12 +86,12 @@ class Submission extends Component {
                         onValueChange={(code) => this.setState({ code })}
                         highlight={code => highlight(code, languages.python, 'python')}
                         padding={20}
-                        placeholder='Code Here'
+                        placeholder='Python 3 Code Here'
                         style={{
                             fontFamily: '"Fira code", "Fira Mono", monospace',
                             fontSize: 16,
                         }}
-                        className='border border-black bg-slate-300'
+                        className='border border-black bg-slate-200'
                     />
                     <br />
 					<button className='py-2 px-4 bg-green-400 text-white text-xl hover:bg-green-500 rounded border-b-4 border-green-600 hover:border-green-800 mt-4'>
