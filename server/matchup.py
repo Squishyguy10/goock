@@ -53,7 +53,7 @@ for game in games:
             
             turn = "two" if turn == "one" else "one"
         
-        gameData = gameProcess.stdout.readline() 
+        gameData = gameProcess.stdout.readline()
         gameHistory["game"].append(gameData.replace("\n", ""))
         gameHistory["winner"] = winner
         gameHistories.append(gameHistory)
