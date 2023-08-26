@@ -1,22 +1,22 @@
 [
     {
-        "name": "stay.py",
-        "score": 4,
+        "name": "antisuberman.py",
+        "score": 6,
         "place": 1
     },
     {
-        "name": "antisuberman.py",
+        "name": "randong.py",
         "score": 3,
         "place": 2
+    },
+    {
+        "name": "stay.py",
+        "score": 2,
+        "place": 3
     },
     {
         "name": "suberman.py",
-        "score": 3,
-        "place": 2
-    },
-    {
-        "name": "randong.py",
-        "score": 2,
+        "score": 1,
         "place": 4
     }
 ]
