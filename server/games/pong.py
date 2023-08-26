@@ -11,9 +11,7 @@ wallDistance = 3
 
 velx = random.randint(2, 5)
 vely = random.randint(2, 5)
-if random.choice(["heads", "tails"]) == "tails":
-    velx = -velx
-if random.choice(["heads", "tails"]) == "tails":
+if random.choice(["heads, tails"]) == "tails":
     vely = -vely
 
 ball = {
@@ -53,14 +51,14 @@ while playing:
                 print("win two")
                 playing = False
             elif paddlesY["one"]+pheight-1 >= ball["y"] >= paddlesY["one"]:
-                ball["x"] = 0
+                ball["x"] = pwidth+wallDistance-1
                 ball["velx"] = -ball["velx"]
         if ball["x"] >= width-pwidth-wallDistance-1:
             if ball["x"] >= width-1:
                 print("win one")
                 playing = False
             elif paddlesY["two"]+pheight-1 >= ball["y"] >= paddlesY["two"]:
-                ball["x"] = width-1
+                ball["x"] = width-pwidth-wallDistance-1
                 ball["velx"] = -ball["velx"]
         if ball["y"] <= 0:
             ball["y"] = 0

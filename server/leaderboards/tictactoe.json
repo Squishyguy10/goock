@@ -6,12 +6,12 @@
     },
     {
         "name": "test3.py",
-        "score": 2.5,
-        "place": 1
+        "score": 2,
+        "place": 2
     },
     {
         "name": "test2.py",
-        "score": 1,
+        "score": 1.5,
         "place": 3
     }
 ]

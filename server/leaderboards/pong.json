@@ -1,12 +1,17 @@
 [
     {
-        "name": "test123.py",
-        "score": 2,
+        "name": "stay.py",
+        "score": 4,
         "place": 1
+    },
+    {
+        "name": "suberman.py",
+        "score": 2,
+        "place": 2
     },
     {
         "name": "randong.py",
         "score": 0,
-        "place": 2
+        "place": 3
     }
 ]
