@@ -30,7 +30,10 @@ class TictactoeView extends Component {
         this.state = {
 			game: 'tictactoe',
             boardState: props.boardState,
-			gameHistory: []
+			gameHistory: [],
+            p1: '',
+            p2: '',
+            winner: '',
         };
 		this.getGameHistory();
 
@@ -62,19 +65,40 @@ class TictactoeView extends Component {
 		
 		let playerOne = this.state.gameHistory[rand].one;
 		let playerTwo = this.state.gameHistory[rand].two;
-		let winner = this.state.gameHistory[rand].winner;
+		let winnerr = this.state.gameHistory[rand].winner;
+        let w = (winnerr === 'one' ? playerOne : playerTwo);
+        this.setState({
+            p1: playerOne,
+            p2: playerTwo,
+            winner: w
+        });
 		
 		setInterval(function() {
-			let curState = this.state.gameHistory[rand].game[i%moves];
+			let curState = this.state.gameHistory[rand].game[i];
 			this.setState({boardState: curState});
-			i++;
+			i = (i + 1) % moves;
 		}.bind(this), 1000);
     }
 
     render() {
         return (
-            <div className='flex justify-center mt-20'>
-                {Board(this.state.boardState)}
+            <div className='bg-amber-100'>
+                <div className='pt-40 pb-60'>
+                    <div className='flex justify-center mt-20 w-full'>
+                        {Board(this.state.boardState)}
+                    </div>
+                    <div className='flex justify-center mt-10 text-xl'>
+                        <h1>
+                            {this.state.p1} (X) vs. {this.state.p2} (O)
+                        </h1>
+                        
+                    </div>
+                    <div className='flex justify-center mt-10 text-xl'>
+                        <h1>
+                            Winner: {this.state.winner}
+                        </h1>
+                    </div>
+                </div>
             </div>
         );
     }
