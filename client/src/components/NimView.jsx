@@ -62,7 +62,7 @@ class NimView extends Component {
 
             let w = (winnerr === 'one' ? playerOne : playerTwo);
 
-            let turn = (i % 2 == 0) ? true : false;
+            let turn = (i % 2 === 0) ? true : false;
 
 			this.setState({ 
                 piles: obj,
