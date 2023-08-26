@@ -60,7 +60,7 @@ class Submission extends Component {
                 data: codeSubmission
             }
             socket.send(JSON.stringify(message));
-            window.location.href = '/submission'
+            window.location.href = '/postsubmission'
         }
     }
 

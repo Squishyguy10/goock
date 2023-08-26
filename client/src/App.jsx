@@ -16,6 +16,7 @@ import PongView from './components/PongView';
 import Hints from './components/Hints';
 import SpectatorHub from './components/SpectatorHub';
 import Sample from './components/Sample';
+import PostSubmission from './components/PostSubmission';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -63,6 +64,10 @@ function App() {
 
           <Route exact path='/view/pong'>
             <PongView />
+          </Route>
+
+          <Route exact path='/postsubmission'>
+            <PostSubmission />
           </Route>
 
           <Route exact path='/leaderboard/nim'>
