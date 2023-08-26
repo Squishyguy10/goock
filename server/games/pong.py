@@ -16,13 +16,13 @@ if random.choice(["heads, tails"]) == "tails":
 
 ball = {
     "x": int(width/2)-1,
-    "y": int(height/2)-1,
+    "y": int(height/2)-int(ballLength/2)-1,
     "velx": velx,
     "vely": vely
 }
 paddlesY = {
-    "one": int(height/2)-1,
-    "two": int(height/2)-1
+    "one": int(height/2)-int(pheight/2)-1,
+    "two": int(height/2)-int(pheight/2)-1
 }
 
 playing = True
