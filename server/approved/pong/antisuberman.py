@@ -8,16 +8,13 @@ while zoo:
     turn, x, y, dx, dy, py, py2 = map(int, input().split(","))
     
     if turn == 0:
-        if y > (py+pheight)/2:
-            print("down")
-        elif y < (py+pheight)/2:
-            print("up")
-        else:
-            print("stay")
+        centre = (py+pheight)/2
     if turn == 1:
-        if y > (py2+pheight)/2:
-            print("down")
-        elif y < (py2+pheight)/2:
-            print("up")
-        else:
-            print("stay")
+        centre = (py2+pheight)/2
+        
+    if y > centre:
+        print("down")
+    elif y < centre:
+        print("up")
+    else:
+        print("stay")

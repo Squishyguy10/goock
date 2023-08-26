@@ -4,14 +4,12 @@
         "two": "test2.py",
         "game": [
             "         ",
-            "  X      ",
-            "O X      ",
-            "OXX      ",
-            "OXXO     ",
-            "OXXO    X",
-            "OXXOO   X",
-            "OXXOO  XX",
-            "OXXOOO XX"
+            "     X   ",
+            "O    X   ",
+            "O    XX  ",
+            "OO   XX  ",
+            "OO  XXX  ",
+            "OOO XXX  "
         ],
         "winner": "two"
     },
@@ -22,12 +20,12 @@
             "         ",
             " X       ",
             "OX       ",
-            "OX   X   ",
-            "OXO  X   ",
-            "OXO  X  X",
-            "OXOO X  X",
-            "OXOO XX X",
-            "OXOOOXX X",
+            "OX     X ",
+            "OXO    X ",
+            "OXO  X X ",
+            "OXOO X X ",
+            "OXOO XXX ",
+            "OXOOOXXX ",
             "OXOOOXXXX"
         ],
         "winner": "one"
@@ -53,10 +51,10 @@
         "game": [
             "         ",
             "X        ",
-            "X       O",
-            "XX      O",
-            "XX     OO",
-            "XXX    OO"
+            "X    O   ",
+            "XX   O   ",
+            "XX O O   ",
+            "XXXO O   "
         ],
         "winner": "one"
     },
@@ -66,15 +64,12 @@
         "game": [
             "         ",
             "X        ",
-            "X O      ",
-            "XXO      ",
-            "XXO   O  ",
-            "XXOX  O  ",
-            "XXOX  O O",
-            "XXOXX O O",
-            "XXOXXOO O"
+            "X    O   ",
+            "XX   O   ",
+            "XX O O   ",
+            "XXXO O   "
         ],
-        "winner": "two"
+        "winner": "one"
     },
     {
         "one": "test3.py",

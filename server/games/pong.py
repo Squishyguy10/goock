@@ -36,8 +36,8 @@ while playing:
         paddlesY[turn] += pvel
     
     #paddle collision with top and bottom handling
-    if paddlesY[turn] < 0:
-        paddlesY[turn] = 0
+    if paddlesY[turn] < 1:
+        paddlesY[turn] = 1
     if paddlesY[turn] > height-pheight-1:
         paddlesY[turn] = height-pheight-1
     
@@ -60,8 +60,8 @@ while playing:
             elif paddlesY["two"]+pheight-1 >= ball["y"] >= paddlesY["two"]:
                 ball["x"] = width-pwidth-wallDistance-1
                 ball["velx"] = -ball["velx"]
-        if ball["y"] <= 0:
-            ball["y"] = 0
+        if ball["y"] <= 1:
+            ball["y"] = 1
             ball["vely"] = -ball["vely"]
         if ball["y"] >= height-ballLength-1:
             ball["y"] = height-ballLength-1

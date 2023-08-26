@@ -1,11 +1,11 @@
 [
     {
-        "name": "antisuberman.py",
+        "name": "stay.py",
         "score": 4,
         "place": 1
     },
     {
-        "name": "randong.py",
+        "name": "antisuberman.py",
         "score": 3,
         "place": 2
     },
@@ -15,7 +15,7 @@
         "place": 2
     },
     {
-        "name": "stay.py",
+        "name": "randong.py",
         "score": 2,
         "place": 4
     }
