@@ -111,6 +111,9 @@ class NimView extends Component {
         return (
             <div className='bg-amber-100'>
                 <div className='pt-52, pb-80'>
+                    <div className='flex justify-center'>
+                        <h1 className='sm:text-4xl text-3xl font-medium title-font font-display mb-5 pt-20'>Spectate Nim</h1>
+                    </div>
                     <div className='flex justify-center container px-5 mx-auto text-center md:px-40 pb-20'>
                         <table cellPadding='30'>
                             {this.getTable()}
