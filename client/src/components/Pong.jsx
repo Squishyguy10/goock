@@ -19,10 +19,10 @@ class Pong extends Component {
                             and vice versa). The moveable paddle deflects the ball, bouncing it back to the other side. Your task is to make an algorithm 
                             that will get the ball's position and velocity, then move your paddle's position accordingly. More rigourously, 
                             you will have to, in an infinite loop ("while True" will suffice), read (using input()) the following: the ball's position, 
-                            the ball's velocity, and your paddle's position. The input will be given in the following format: (x,y,dx,dy,py). (x, y) 
+                            the ball's velocity, and your paddle's position. The input will be given in the following format: (x,y,dx,dy,py,py2). (x, y) 
                             represents the ball's position (where (0, 0) is the top left). (dx, dy) are the velocities in the x and y axes respectively 
                             (positive dx is down, negative dx is up, positive dy is right, negative dy is left). Finally, py is the y position of the centre of 
-                            your paddle (your paddle's x position is fixed). Note that the paddle is 54 units in length. You must then output either "up" 
+                            your paddle (your paddle's x position is fixed) and py2 is the opponent's paddle's y-coordinate. Note that the paddle is 54 units in length. You must then output either "up" 
                             or "down", to go up 6 pixels or down 6 pixels respectively. 
                         </p>
                     </div>
