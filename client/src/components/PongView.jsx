@@ -73,7 +73,7 @@ class PongView extends Component {
 		});
 		socket.addEventListener('message', (event) => {
 			this.setState({gameHistory: JSON.parse(event.data)}, () => {
-				console.log(this.state.gameHistory);
+				//console.log(this.state.gameHistory);
 				if (this.state.gameHistory.length > 0) {
 					this.displayGame();
 				}
@@ -87,7 +87,7 @@ class PongView extends Component {
 		}
 		
         let rand = Math.floor(Math.random() * this.state.gameHistory.length);
-		console.log(rand);
+		//console.log(rand);
         let moves = this.state.gameHistory[rand].game.length;
 		let i=0;
 		
