@@ -4,25 +4,30 @@
         "two": "test2.py",
         "game": [
             "         ",
-            "       X ",
-            "O      X ",
-            "O    X X ",
-            "OO   X X ",
-            "OO  XX X ",
-            "OOO XX X "
+            "  X      ",
+            "O X      ",
+            "OXX      ",
+            "OXXO     ",
+            "OXXOX    ",
+            "OXXOXO   ",
+            "OXXOXO X "
         ],
-        "winner": "two"
+        "winner": "one"
     },
     {
         "one": "randy.py",
         "two": "test3.py",
         "game": [
             "         ",
-            " X       ",
-            "OX       ",
-            "OX     X ",
-            "OXO    X ",
-            "OXO X  X "
+            "X        ",
+            "XO       ",
+            "XO  X    ",
+            "XOO X    ",
+            "XOO X X  ",
+            "XOOOX X  ",
+            "XOOOXXX  ",
+            "XOOOXXXO ",
+            "XOOOXXXOX"
         ],
         "winner": "one"
     },
@@ -47,10 +52,14 @@
         "game": [
             "         ",
             "X        ",
-            "X      O ",
-            "XX     O ",
-            "XX    OO ",
-            "XXX   OO "
+            "X    O   ",
+            "XX   O   ",
+            "XXO  O   ",
+            "XXOX O   ",
+            "XXOX OO  ",
+            "XXOXXOO  ",
+            "XXOXXOOO ",
+            "XXOXXOOOX"
         ],
         "winner": "one"
     },
@@ -60,10 +69,10 @@
         "game": [
             "         ",
             "X        ",
-            "X     O  ",
-            "XX    O  ",
-            "XX    O O",
-            "XXX   O O"
+            "X   O    ",
+            "XX  O    ",
+            "XX  O O  ",
+            "XXX O O  "
         ],
         "winner": "one"
     },
