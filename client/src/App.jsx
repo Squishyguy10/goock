@@ -15,6 +15,7 @@ import NimView from './components/NimView';
 import PongView from './components/PongView';
 import Hints from './components/Hints';
 import SpectatorHub from './components/SpectatorHub';
+import Sample from './components/Sample';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -87,6 +88,10 @@ function App() {
 
           <Route exact path='/spectate'>
             <SpectatorHub />
+          </Route>
+
+          <Route exact path='/sample'>
+            <Sample />
           </Route>
 
         </Switch>

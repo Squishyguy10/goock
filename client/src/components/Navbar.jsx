@@ -23,6 +23,9 @@ function Navbar() {
                     <a href='/spectate' className='mr-5 hover:text-amber-400'>
                         Spectate
                     </a>
+                    <a href='/sample' className='mr-5 hover:text-amber-400'>
+                        Sample
+                    </a>
                 </nav>
             </div>
         </header>
