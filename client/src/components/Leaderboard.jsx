@@ -67,7 +67,7 @@ class Leaderboard extends Component {
 
     render() {
         return (
-            <div className='text-center bg-amber-100'>
+            <div className='text-center bg-amber-100 pb-52'>
                 {this.getIcon('mx-auto w-10 py-10')}
                 <h1 className='sm:text-4xl text-3xl font-medium title-font font-display pb-10'>
                     Top Submissions for {this.getName()}
