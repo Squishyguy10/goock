@@ -51,11 +51,11 @@ class TictactoeView extends Component {
 			socket.send(JSON.stringify(message));
 		});
 		socket.addEventListener('message', (event) => {
-			this.setState({gameHistory: JSON.parse(event.data)});
-            console.log(this.state.gameHistory);
-            if (this.state.gameHistory.length) this.displayGame();
+			this.setState({gameHistory: JSON.parse(event.data)}, () => {
+				//console.log(this.state.gameHistory);
+				if (this.state.gameHistory.length > 0) this.displayGame();
+			});
 		});
-        
 	}
 
     displayGame() {		
