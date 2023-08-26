@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const squareStyle = 'bg-white border border-gray-300 float-left text-5xl font-bold leading-9 h-20 w-20 -ml-1 -mt-1 text-center';
-
 const socket = new WebSocket('ws://localhost:3001');
+
+const squareStyle = 'bg-white border border-gray-300 float-left text-5xl font-bold leading-9 h-20 w-20 -ml-1 -mt-1 text-center';
 
 function Square({ value }) {
     return <button className={squareStyle}>{value}</button>
@@ -21,8 +21,6 @@ function Board(gameState) {
     }
 
     return <div>{squares}</div>;
-
-    
 }
 
 class TictactoeView extends Component {
@@ -60,7 +58,6 @@ class TictactoeView extends Component {
             </div>
         );
     }
-
 }
 
 export default TictactoeView;

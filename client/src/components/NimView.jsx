@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const socket = new WebSocket('ws://localhost:3001');
+
 const testJson = [
     {
         num: 0,
@@ -23,12 +25,29 @@ class NimView extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
+			game: "nim",
             piles: props.piles,
+			gameHistory: []
         };
-
+		this.getGameHistory();
     }
+	
+	getGameHistory() {
+		socket.addEventListener('open', () => {
+			let gameHistoryRequest = {
+				game: this.state.game
+			};
+			let message = {
+				type: "requestGameHistory",
+				data: gameHistoryRequest
+			};
+			socket.send(JSON.stringify(message));
+		});
+		socket.addEventListener('message', (event) => {
+			this.setState({gameHistory: JSON.parse(event.data)});
+		});
+	}
 
     getPileString(cnt) {
         let pile = '';
@@ -66,7 +85,6 @@ class NimView extends Component {
             </div>
         );
     }
-
 }
 
 export default NimView;
