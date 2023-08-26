@@ -27,7 +27,7 @@ class NimView extends Component {
         super(props);
         this.state = {
 			game: "nim",
-            piles: props.piles,
+            piles: [1],
 			gameHistory: []
         };
 		this.getGameHistory();
@@ -46,13 +46,34 @@ class NimView extends Component {
 		});
 		socket.addEventListener('message', (event) => {
 			this.setState({gameHistory: JSON.parse(event.data)});
+            console.log(this.state.gameHistory);
+            if (this.state.gameHistory.length > 0) this.displayGame();
 		});
 	}
 
     getPileString(cnt) {
         let pile = '';
         for (let i=0; i<cnt; i++) pile += '🗿';
+        console.log(pile);
         return pile;
+    }
+
+    displayGame() {
+        let rand = Math.floor(Math.random() * this.state.gameHistory.length);
+        let moves = this.state.gameHistory[rand].game.length;
+		let i=0;
+		setInterval(function() {
+			let curState = this.state.gameHistory[rand].game[i];
+            let arr = curState.split(',');
+            let obj = []
+            for (let i=0; i<arr.length; i++) {
+                obj.push({ num: i, cnt: arr[i] });
+            }
+			this.setState({ piles: obj }, () => {
+
+            });
+			i = (i + 1) % moves;
+		}.bind(this), 3000);
     }
 
     getTable() {
@@ -64,11 +85,11 @@ class NimView extends Component {
                         <th>Stones</th>
                     </tr>
                 </thead>
-                {(testJson).map((pile) => (
+                {(this.state.piles).map((pile) => (
                     <tbody className='text-lg'>
                         <tr key={pile}>
                             <td>{pile.num}</td>
-                            <td>{this.getPileString(pile.cnt)}</td>
+                            <td>{this.getPileString(parseInt(pile.cnt))}</td>
                         </tr>
                     </tbody>
                 ))}
