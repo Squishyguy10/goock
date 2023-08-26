@@ -1,17 +1,17 @@
 [
     {
         "name": "randy.py",
-        "score": 2,
-        "place": 1
-    },
-    {
-        "name": "test2.py",
-        "score": 2,
+        "score": 2.5,
         "place": 1
     },
     {
         "name": "test3.py",
-        "score": 2,
+        "score": 2.5,
         "place": 1
+    },
+    {
+        "name": "test2.py",
+        "score": 1,
+        "place": 3
     }
 ]

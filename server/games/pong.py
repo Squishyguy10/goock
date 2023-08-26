@@ -33,9 +33,9 @@ while playing:
     print(",".join(list(map(str, [["one", "two"].index(turn), ball["x"], ball["y"], ball["velx"], ball["vely"], paddlesY["one"], paddlesY["two"]]))))
     movement = input()
     if movement == "up":
-        paddlesY[turn] += pvel
-    elif movement == "down":
         paddlesY[turn] -= pvel
+    elif movement == "down":
+        paddlesY[turn] += pvel
     
     #paddle collision with top and bottom handling
     if paddlesY[turn] < 0:
