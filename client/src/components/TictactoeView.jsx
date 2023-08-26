@@ -55,10 +55,15 @@ class TictactoeView extends Component {
         
 	}
 
-    displayGame() {
+    displayGame() {		
         let rand = Math.floor(Math.random() * this.state.gameHistory.length);
         let moves = this.state.gameHistory[rand].game.length;
 		let i=0;
+		
+		let playerOne = this.state.gameHistory[rand].one;
+		let playerTwo = this.state.gameHistory[rand].two;
+		let winner = this.state.gameHistory[rand].winner;
+		
 		setInterval(function() {
 			let curState = this.state.gameHistory[rand].game[i%moves];
 			this.setState({boardState: curState});
