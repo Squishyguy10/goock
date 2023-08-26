@@ -16,6 +16,7 @@ const games = [
     },
 ]
 
+
 function Hints() {
     return (
         <div className='bg-gradient-to-b from-amber-100 via-amber-100 to-white'>
