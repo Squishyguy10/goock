@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import { VideoCameraIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
+function ReloadLink({ to, children }) {
+	const handleClick = () => {
+		window.location.href = to;
+	};
+	return (
+		<button
+			className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'
+			onClick={handleClick}
+		>
+			{children}
+		</button>
+	);
+}
 
-class LeaderboardHub extends Component {	
+class SpectatorHub extends Component {	
     render() {
         return (
             <div className='bg-gradient-to-b from-amber-100 via-amber-100 to-white'>
@@ -20,21 +33,11 @@ class LeaderboardHub extends Component {
 
                     {/*Buttons*/}
                     <div className='inline-flex gap-x-4 pb-4'>
-                        <Link to='/view/tictactoe'>
-                            <button className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'>
-                                Tic Tac Toe
-                            </button>
-                        </Link>
-                        <Link to='/view/nim'>
-                            <button className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'>
-                                Nim
-                            </button>
-                        </Link>
-                        <Link to='/view/pong'>
-                            <button className='py-2 px-4 bg-orange-400 text-white text-xl hover:bg-orange-500 rounded border-b-4 border-orange-600 hover:border-orange-800'>
-                                Pong
-                            </button>
-                        </Link>
+						<ReloadLink to='/view/tictactoe'>Tic Tac Toe</ReloadLink>
+						
+						<ReloadLink to='/view/nim'>Nim</ReloadLink>
+						
+						<ReloadLink to='/view/pong'>Pong</ReloadLink>
                     </div>
                 </div>
             </div>
@@ -42,4 +45,4 @@ class LeaderboardHub extends Component {
     }
 }
 
-export default LeaderboardHub;
+export default SpectatorHub;
