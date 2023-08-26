@@ -13,7 +13,7 @@ while playing:
             playing = False
             break
     turn = "O" if turn == "X" else "X"
-    if " " not in board and playing == False:
+    if " " not in board and playing:
         print("draw")
         playing = False
     if playing:
