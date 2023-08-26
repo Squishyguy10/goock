@@ -41,7 +41,7 @@ class NimView extends Component {
     getPileString(cnt) {
         let pile = '';
         for (let i=0; i<cnt; i++) pile += '🗿';
-        console.log(pile);
+        //console.log(pile);
         return pile;
     }
 
