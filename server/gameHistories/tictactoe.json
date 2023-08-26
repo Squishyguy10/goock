@@ -4,32 +4,28 @@
         "two": "test2.py",
         "game": [
             "         ",
-            "     X   ",
-            "O    X   ",
-            "OX   X   ",
-            "OXO  X   ",
-            "OXO XX   ",
-            "OXOOXX   ",
-            "OXOOXX X "
+            "    X    ",
+            "O   X    ",
+            "O   X   X",
+            "OO  X   X",
+            "OO  X  XX",
+            "OOO X  XX"
         ],
-        "winner": "one"
+        "winner": "two"
     },
     {
         "one": "randy.py",
         "two": "test3.py",
         "game": [
             "         ",
-            "   X     ",
-            "O  X     ",
-            "OX X     ",
-            "OXOX     ",
-            "OXOX    X",
-            "OXOXO   X",
-            "OXOXO  XX",
-            "OXOXOO XX",
-            "OXOXOOXXX"
+            "        X",
+            "O       X",
+            "O   X   X",
+            "OO  X   X",
+            "OO  XX  X",
+            "OOO XX  X"
         ],
-        "winner": "one"
+        "winner": "two"
     },
     {
         "one": "test2.py",
@@ -52,16 +48,15 @@
         "game": [
             "         ",
             "X        ",
-            "XO       ",
-            "XOX      ",
-            "XOX     O",
-            "XOXX    O",
-            "XOXX O  O",
-            "XOXXXO  O",
-            "XOXXXOO O",
-            "XOXXXOOXO"
+            "X O      ",
+            "XXO      ",
+            "XXO     O",
+            "XXOX    O",
+            "XXOX  O O",
+            "XXOXX O O",
+            "XXOXX OOO"
         ],
-        "winner": "draw"
+        "winner": "two"
     },
     {
         "one": "test3.py",
@@ -69,10 +64,14 @@
         "game": [
             "         ",
             "X        ",
-            "X    O   ",
-            "XX   O   ",
-            "XX   O O ",
-            "XXX  O O "
+            "XO       ",
+            "XOX      ",
+            "XOX    O ",
+            "XOXX   O ",
+            "XOXX O O ",
+            "XOXXXO O ",
+            "XOXXXO OO",
+            "XOXXXOXOO"
         ],
         "winner": "one"
     },

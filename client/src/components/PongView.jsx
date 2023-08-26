@@ -47,15 +47,16 @@ const Canvas = ({ gameData, ...props }) => {
 class PongView extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = {
+		super(props);
+		this.state = {
 			game: "pong",
 			gameHistory: [],
-            gameInfo: {'bx': 60, 'by': 10, 'p1y': 55, 'p2y': 55},
-            p1: '',
-            p2: '',
-            winner: '',
-        };
+			gameInfo: {'bx': 60, 'by': 10, 'p1y': 55, 'p2y': 55},
+			p1: '',
+			p2: '',
+			winner: ''
+		};
+		this.intervalID = null;
 		this.getGameHistory();
     }
 	
@@ -71,13 +72,22 @@ class PongView extends Component {
 			socket.send(JSON.stringify(message));
 		});
 		socket.addEventListener('message', (event) => {
-			this.setState({gameHistory: JSON.parse(event.data)});
-            if (this.state.gameHistory.length > 0) this.displayGame();
+			this.setState({gameHistory: JSON.parse(event.data)}, () => {
+				console.log(this.state.gameHistory);
+				if (this.state.gameHistory.length > 0) {
+					this.displayGame();
+				}
+			});
 		});
 	}
 
-    displayGame() {		
+    displayGame() {
+		if (this.intervalID !== null) {
+			clearInterval(this.intervalID);
+		}
+		
         let rand = Math.floor(Math.random() * this.state.gameHistory.length);
+		console.log(rand);
         let moves = this.state.gameHistory[rand].game.length;
 		let i=0;
 		
@@ -91,7 +101,7 @@ class PongView extends Component {
             winner: w
         });
 		
-		setInterval(function() {
+		this.intervalID = setInterval(function() {
 			let curState = this.state.gameHistory[rand].game[i].split(',');
 			let json = {};
             json['bx'] = parseInt(curState[1]);
@@ -102,12 +112,12 @@ class PongView extends Component {
             this.setState({
                 gameInfo: json,
             }, () => {
-                console.log(this.state.gameInfo);
+                //console.log(this.state.gameInfo);
             });
-            console.log(this.state.gameInfo);
+            //console.log(this.state.gameInfo);
 			i = (i + 1) % moves;
-            console.log(i);
-		}.bind(this), 5);
+            //console.log(i);
+		}.bind(this), 20);
     }
 
     render() {
